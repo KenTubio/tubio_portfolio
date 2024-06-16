@@ -25,7 +25,7 @@
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#home">Home</a>
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#m/v">Mission/Vision</a>
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#faculty-lead">Faculty Leaders</a>
-                    <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="">Student Leaders</a>
+                    <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#student-lead">Student Leaders</a>
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="">About</a>
                 </ul>
             </nav>
@@ -96,6 +96,80 @@
                 <div><img class="w-72 rounded-lg" src="../images/ogdiman_advicer.png" alt=""></div>
             </figure>
         </main>
+    </section>
+
+    <section id="student-lead" class="p-3 w-full bg-no-repeat bg-center bg-cover pt-24" style="background-image: url(../images/image_part_004.jpg);">
+        <main class="w-full flex pt-10 xl:flex-col xl:gap-12">
+            <figure class="w-2/4 flex justify-center items-center xl:w-full">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/comisas_pres.png" style="display: block;">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/asama_vp.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/maliao_sec.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/daños_treasurer.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/cariaga_auditor.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/toledo_pio.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/tingkong_pm.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/faburada_pm.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/ug_pc.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/jison_pc.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/arañez_1strep.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/urbano_2ndrep.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/visitacion_2ndrep.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/orong_3rdrep.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/hernadez_3rdrep.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/paspie_4threp.png">
+                <img class="mySlides w-[34rem] rounded-lg " src="../images/ogdiman_advicer.png">
+            </figure>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    clearTimeout(timer); 
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    clearTimeout(timer); 
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+
+                    
+                    timer = setTimeout(function() {
+                        showSlides(slideIndex += 1);
+                    }, 2000); 
+                }
+            </script>
+
+            <article class="w-2/4 xl:w-full xl:flex xl:justify-center xl:items-center">
+                <main class="flex flex-col gap-10 xl:justify-center xl:items-center xl:w-3/5">
+                    <header class="w-full flex justify-center items-center text-5xl font-bold bg-teal-800 text-white p-3"><h1>LEADERS</h1></header>
+            
+                    <p class="text-justify text-3xl leading-10"> "A true leader has the confidence to stand alone, the courage to make tough
+                        decisions, and the compassion to listen to the needs of others. <span class="font-bold underline underline-offset-8">-Douglas Macarthur</span>".
+                    </p>
+
+                    <br>
+
+                    <p class="text-justify text-3xl leading-10"> Introducing the trailblazers of the Society of Environmental Engineers of the Philippines - 
+                        WMSU Student Chapter, Embarking on their leadership journey for the S.Y 2023-2024.
+                    </p>
+                </main>
+            </article>
+        </main>
+    </section>
+
+    <section class="h-screen ">
+        d
     </section>
 </body>
 </html>
