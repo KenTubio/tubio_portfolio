@@ -950,16 +950,12 @@ video {
   padding: 1rem;
 }
 
-.p-9 {
-  padding: 2.25rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-7 {
   padding: 1.75rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
 }
 
 .px-10 {
@@ -1152,6 +1148,18 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.underline-offset-8 {
+  text-underline-offset: 8px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 
 .backdrop-blur-sm {
