@@ -1525,6 +1525,14 @@ video {
 }
 
 @media (max-width: 1279px) {
+  .xl\:absolute {
+    position: absolute;
+  }
+
+  .xl\:bottom-3 {
+    bottom: 0.75rem;
+  }
+
   .xl\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -1563,6 +1571,10 @@ video {
 }
 
 @media (max-width: 1023px) {
+  .lg\:static {
+    position: static;
+  }
+
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
   }
