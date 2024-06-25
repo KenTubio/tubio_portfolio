@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../output.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Practice Javascript</title>
+    
+</head>
+<body>
+    <main class="h-screen w-full bg-slate-400 text-white flex-col">
+        <header class="bg-green-500 p-4 text-3xl">
+            <nav class="flex justify-between">
+                <ul class="flex gap-7 ">
+                    <li class="hover:bg-slate-800">Home</li>
+                    <li class="hover:bg-slate-800">Contacts</li>
+                    <li class="hover:bg-slate-800">About</li>
+                </ul>
+                <i class="fa-solid fa-bars hover:scale-110 hidden"></i>
+            </nav>
+        </header>
+        
+
+        <h1 id="greet" class="head text-4xl font-bold">My first js practice</h1>
+
+        <div class="border-2 border-green-600 rounded-lg p-3 w-40">
+            <h1 class="mb-4">Hello world</h1>
+            <button onclick="alert('hi ilove js')" class="bg-gray-600 px-4 py-2 rounded-md hover:scale-105">Click Me!</button>
+        </div>
+    -------------------------------------------------------------------------------
+
+
+
+    <div class="border-2 border-green-600 rounded-lg p-3 w-40">
+        <h1 class="mb-4">js pop up</h1>
+        <button id="btn-js" class="reveal-btn bg-gray-600 px-4 py-2 rounded-md hover:scale-105">Click Me instead!</button>
+    </div>
+    <div class="hidden-content hidden border-2 border-green-600 rounded-lg p-3 w-80">
+        <p class="w-72">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam fugiat nam, omnis molestiae consequatur architecto nobis sapiente quia ad quo totam magnam sed veritatis reiciendis dolorum, tempore repellat? Maiores, ad.</p>
+    </div>
+    
+    
+    </main>
+
+    <script src="practice.js"></script>
+</body>
+</html>

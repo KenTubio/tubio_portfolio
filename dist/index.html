@@ -17,17 +17,20 @@
 
     <section id="home" class="h-screen w-full">
       <header
-        class="z-10 bg-[#00000080] backdrop-blur-sm p-3 text-2xl font-bold text-white flex justify-around items-center fixed right-0 left-0"
+        class="z-10 bg-[#00000080] backdrop-blur-sm p-3 text-2xl font-bold text-white flex justify-around items-center fixed right-0 left-0 lg:items-start lg:justify-between"
       >
-        <div><img class="w-64" src="../dist/images/logo.png" alt="" /></div>
-        <nav>
-          <ul class="flex gap-10">
+        <div><img class="w-64 hide-img" src="../dist/images/logo.png" alt="" /></div>
+        <nav class="lg:hidden hidden-nav lg:h-screen lg:text-center">
+          <ul class="flex gap-10 lg:flex-col">
             <a class="relative before:absolute before:bottom-[-.4rem] before:rounded-lg before:content-[''] before:h-[.3rem] before:bg-emerald-400  before:w-0 before:hover:w-full transition/100 before:transition-all before:duration-500 before: ease-in-out" href="#home">Home</a>
             <a class="relative before:absolute before:bottom-[-.4rem] before:rounded-lg before:content-[''] before:h-[.3rem] before:bg-emerald-400  before:w-0 before:hover:w-full transition/100 before:transition-all before:duration-500 before: ease-in-out" href="#about">About</a>
             <a class="relative before:absolute before:bottom-[-.4rem] before:rounded-lg before:content-[''] before:h-[.3rem] before:bg-emerald-400  before:w-0 before:hover:w-full transition/100 before:transition-all before:duration-500 before: ease-in-out" href="#projects">Projects</a>
             <a class="relative before:absolute before:bottom-[-.4rem] before:rounded-lg before:content-[''] before:h-[.3rem] before:bg-emerald-400  before:w-0 before:hover:w-full transition/100 before:transition-all before:duration-500 before: ease-in-out" href="#contacts">Contact</a>
         </nav>
+        <span class="reveal hidden lg:block"><i class="fa-solid fa-bars hover:scale-110"></i></span>
       </header>
+
+      <script src="./js/index.js"></script>
 
       <main
         class="gap-14 flex-col flex justify-center items-center relative before:absolute before:content-[''] before:bg-[#00000090] before:h-screen before:w-full h-full w-full bg-cover bg-center bg-no-repeat bg-fixed"
