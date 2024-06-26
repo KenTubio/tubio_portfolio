@@ -13,15 +13,15 @@
 </head>
 <body class="font-mono">
     <main id="home" class="h-screen w-full bg-no-repeat bg-center bg-cover relative" style="background-image: url(../images/image_part_001.jpg);">
-        <header class="flex items-center justify-between p-2 bg-[#00808080] backdrop-blur-sm fixed top-0 left-0 right-0">
-            <figure class="flex gap-2">
-                <img class="rounded-full w-20" src="../images/ee-eng.jpg" alt="">
-                <img class="rounded-full w-20" src="../images/ee-eng2.jpg" alt="">
-                <img class="rounded-full w-20" src="../images/ee-wmsu.jpg" alt="">
-                <img class="rounded-full w-20" src="../images/eep.jpg" alt="">
+        <header class="flex items-center justify-between xl:justify-center p-2 bg-[#00808080] backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+            <figure class="flex gap-2 hide-img">
+                <img class="rounded-full w-20 sm:w-14" src="../images/ee-eng.jpg" alt="">
+                <img class="rounded-full w-20 sm:w-14" src="../images/ee-eng2.jpg" alt="">
+                <img class="rounded-full w-20 sm:w-14" src="../images/ee-wmsu.jpg" alt="">
+                <img class="rounded-full w-20 sm:w-14" src="../images/eep.jpg" alt="">
             </figure>
-            <nav>
-                <ul class="text-white text-xl font-bold flex  gap-12">
+            <nav class="xl:hidden hidden-nav xl:h-screen">
+                <ul class="text-white text-xl font-bold flex xl:flex-col xl:text-center xl:justify-center  gap-12">
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#home">Home</a>
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#m/v">Mission/Vision</a>
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#faculty-lead">Faculty Leaders</a>
@@ -29,21 +29,24 @@
                     <a class="hover:bg-white hover:text-teal-700 hover:px-4 hover:transition hover:rounded-md hover:py-1" href="#contact">Contact</a>
                 </ul>
             </nav>
+            <span class="reveal hidden text-white text-2xl xl:block xl:absolute xl:right-2 xl:top-6">
+                <i class="fa-solid fa-bars hover:scale-110"></i>
+            </span>
         </header>
 
         <div class="flex justify-center items-center flex-col text-white gap-12 pt-72">
             <div>
-                <h1 class="text-5xl font-bold lg:text-3xl">Environmental Engineering Portal</h1>
+                <h1 class="text-5xl font-bold lg:text-3xl text-center">Environmental Engineering Portal</h1>
             </div>
             <div class="w-2/4 text-center">
-                <p class="lg:text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi mollitia nulla quisquam libero distinctio placeat, nihil, vitae laudantium exercitationem, itaque quam! Vitae voluptate blanditiis sint atque in aperiam fugiat possimus?</p>
+                <p class="lg:text-xs">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi mollitia nulla quisquam libero distinctio placeat, nihil, vitae laudantium exercitationem, itaque quam! Vitae voluptate blanditiis sint atque in aperiam fugiat possimus?</p>
             </div>
             <div>
                 <button class="px-7 bg-white text-teal-800 text-2xl font-bold py-4 rounded-3xl hover:scale-105 transition cursor-pointer">Get-started!</button>
             </div>
         </div>
 
-        <div class="text-white w-2/5 text-justify absolute left-3 bottom-3 md:hidden">
+        <div class="z-0 text-white w-2/5 text-justify absolute left-3 bottom-3 md:hidden">
             <ul class="list-disc list-inside flex flex-col gap-3 lg:text-sm">
                 <li>Approved through WMSU BOR no. 68 series of 2018</li>
                 <li>ISO 9901: 2015 Certidied</li>
@@ -51,7 +54,7 @@
             </ul>
         </div>
 
-        <div class="text-white w-2/6 text-justify absolute right-3 bottom-3 md:hidden">
+        <div class="z-0 text-white w-2/6 text-justify absolute right-3 bottom-3 md:hidden">
             <ul class="list-disc list-inside text-sm lg:text-xs">
                 <li>Re- Accredited with the Accrediting Agency of Chartered Colleges and Universities in the Philipppines
                     (AACCUP) Level 2 as of August 1, 2018 to July 2022
@@ -64,19 +67,19 @@
     </main>
 
     <section id="m/v" class="p-3 bg-no-repeat bg-center bg-cover h-full" style="background: url(../images/image_part_002.jpg);">
-        <main class="flex gap-7 pt-24">
-            <div class="w-2/4">
-                <header class="w-full flex justify-center items-center text-5xl font-bold bg-teal-800 text-white p-3"><h1>MISSION</h1></header>
-                <p class="text-2xl text-justify leading-10 p-7"> The Environmental Engineering Department will excel in Instruction, Research, Production,
+        <main class="flex gap-7 pt-24 lg:flex-col">
+            <div class="w-2/4 lg:w-full">
+                <header class="w-full flex justify-center items-center sm:text-2xl text-5xl font-bold bg-teal-800 text-white p-3"><h1>MISSION</h1></header>
+                <p class="text-2xl  sm:text-base text-justify leading-10 p-7"> The Environmental Engineering Department will excel in Instruction, Research, Production,
                     and Extension through innovative methodologies responsive to current and future environmental changes. It is
                     committed to educating and producing top-quality environmental engineers who are trained and equipped with the knowledge
                     and skills to protect and enhance environmental quality, hence support sustainable development.
                 </p>
             </div>
 
-            <div class="w-2/4">
-                <header class="w-full flex justify-center items-center text-5xl font-bold bg-teal-800 text-white p-3"><h1>VISION</h1></header>
-                <p class="text-2xl text-justify leading-10 p-7"> We will be a nationally recognized accredited department and leading institution in environmental engineering
+            <div class="w-2/4 lg:w-full">
+                <header class="w-full flex justify-center items-cente sm:text-2xl text-5xl font-bold bg-teal-800 text-white p-3"><h1>VISION</h1></header>
+                <p class="text-2xl sm:text-base text-justify leading-10 p-7"> We will be a nationally recognized accredited department and leading institution in environmental engineering
                     education and research. Our graduates are sought-after environmental experts, imbued with sound Filipino values, productive,
                     globally competitive, and deeply committed to community services.
                 </p>
@@ -86,10 +89,10 @@
 
     <section id="faculty-lead" class="p-3 w-full bg-no-repeat bg-center bg-cover pt-28" style="background-image: url(../images/image_part_003.jpg);">
         <main>
-            <header class="w-full bg-teal-800 text-white p-3 text-5xl flex justify-center"><h1>FACULTY LEADERS</h1></header>
+            <header class="sm:text-2xl w-full bg-teal-800 text-white p-3 text-5xl flex justify-center text-center"><h1>FACULTY LEADERS</h1></header>
             <figure class="flex justify-center mt-14"><img class="w-72 rounded-lg" src="../images/adil_dept_head.png" alt=""></figure>
 
-            <figure class="grid grid-cols-2 justify-items-center mt-14 gap-7">
+            <figure class="grid grid-cols-2 justify-items-center mt-14 gap-7 sm:grid-cols-1">
                 <div><img class="w-72 rounded-lg" src="../images/flores_faculty.png" alt=""></div>
                 <div><img class="w-72 rounded-lg" src="../images/rabongue_faculty.png" alt=""></div>
                 <div><img class="w-72 rounded-lg" src="../images/gumaling_faculty.png" alt=""></div>
@@ -101,66 +104,36 @@
     <section id="student-lead" class="p-3 w-full bg-no-repeat bg-center bg-cover pt-24" style="background-image: url(../images/image_part_004.jpg);">
         <main class="w-full flex pt-10 xl:flex-col xl:gap-12">
             <figure class="w-2/4 flex justify-center items-center xl:w-full">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/comisas_pres.png" style="display: block;">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/asama_vp.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/maliao_sec.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/daños_treasurer.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/cariaga_auditor.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/toledo_pio.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/tingkong_pm.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/faburada_pm.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/ug_pc.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/jison_pc.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/arañez_1strep.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/urbano_2ndrep.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/visitacion_2ndrep.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/orong_3rdrep.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/hernadez_3rdrep.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/paspie_4threp.png">
-                <img class="mySlides w-[34rem] rounded-lg " src="../images/ogdiman_advicer.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/comisas_pres.png" style="display: block;">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/asama_vp.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/maliao_sec.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/daños_treasurer.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/cariaga_auditor.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/toledo_pio.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/tingkong_pm.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/faburada_pm.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/ug_pc.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/jison_pc.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/arañez_1strep.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/urbano_2ndrep.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/visitacion_2ndrep.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/orong_3rdrep.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/hernadez_3rdrep.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/paspie_4threp.png">
+                <img class="mySlides w-[34rem] rounded-lg sm:w-[25rem]" src="../images/ogdiman_advicer.png">
             </figure>
-            <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
-
-                function plusSlides(n) {
-                    clearTimeout(timer); 
-                    showSlides(slideIndex += n);
-                }
-
-                function currentSlide(n) {
-                    clearTimeout(timer); 
-                    showSlides(slideIndex = n);
-                }
-
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    if (n > slides.length) {slideIndex = 1}    
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-                    slides[slideIndex-1].style.display = "block";  
-
-                    
-                    timer = setTimeout(function() {
-                        showSlides(slideIndex += 1);
-                    }, 2000); 
-                }
-            </script>
 
             <article class="w-2/4 xl:w-full xl:flex xl:justify-center xl:items-center">
-                <main class="flex flex-col gap-10 xl:justify-center xl:items-center xl:w-3/5">
-                    <header class="w-full flex justify-center items-center text-5xl font-bold bg-teal-800 text-white p-3"><h1>LEADERS</h1></header>
+                <main class="flex flex-col gap-10 xl:justify-center xl:items-center sm:w-full">
+                    <header class="sm:text-2xl w-full flex justify-center items-center text-5xl font-bold bg-teal-800 text-white p-3"><h1>LEADERS</h1></header>
             
-                    <p class="text-justify text-3xl leading-10"> "A true leader has the confidence to stand alone, the courage to make tough
+                    <p class="text-justify text-3xl leading-10 xl:px-10 sm:text-lg"> "A true leader has the confidence to stand alone, the courage to make tough
                         decisions, and the compassion to listen to the needs of others. <span class="font-bold underline underline-offset-8">-Douglas Macarthur</span>".
                     </p>
 
                     <br>
 
-                    <p class="text-justify text-3xl leading-10"> Introducing the trailblazers of the Society of Environmental Engineers of the Philippines - 
+                    <p class="text-justify text-3xl leading-10 xl:px-10 sm:text-lg"> Introducing the trailblazers of the Society of Environmental Engineers of the Philippines - 
                         WMSU Student Chapter, Embarking on their leadership journey for the S.Y 2023-2024.
                     </p>
                 </main>
@@ -170,12 +143,12 @@
 
     <section class="w-full p-3 bg-no-repeat bg-cover bg-center" style="background-image: url(../images/image_part_005.jpg);">
         <main>
-            <header class="w-full flex justify-center items-center text-5xl font-bold bg-teal-800 text-white p-3"><h1>EDUCATIONAL OBJECTIVES</h1></header>
-            <h1 class="text-center font-bold text-2xl mt-14">Graduates of the BS EnE program will:</h1>
+            <header class="w-full flex justify-center items-center text-5xl font-bold bg-teal-800 text-white p-3 text-center sm:text-2xl"><h1>EDUCATIONAL OBJECTIVES</h1></header>
+            <h1 class="text-center font-bold text-2xl mt-14 sm:text-xl">Graduates of the BS EnE program will:</h1>
         </main>
 
         <article class="flex justify-center items-center my-16">
-            <ol class="list-decimal list-inside text-justify text-3xl w-3/5 flex flex-col gap-9 text-teal-900 font-bold">
+            <ol class="list-decimal list-inside text-justify text-3xl sm:text-base sm:w-full sm:px-8 w-3/5 flex flex-col gap-9 text-teal-900 font-bold">
                 <li>Establish an Environmental and Engineering career in industry, government, consulting or academia</li>
                 <li>Commit to lifelong learning and professional development to stay current in technology and contemporary issues; and</li>
                 <li>take on increasing levels of responsibility and leadership in technical and/or managerial role.</li>
@@ -184,32 +157,36 @@
     </section>
 
     <footer id="contact" class="bg-teal-900 text-white p-4" >
-        <main class="grid grid-cols-3 gap-20 justify-items-center xl:grid-cols-2">
-            <div class="flex items-center xl:col-span-2">
-                <h1 class="text-4xl font-bold font-serif leading-snug text-center">WE <span class="text-green-400">ENGINEER</span> SOLUTIONS TO POLLUTION !</h1>
+        <main class="grid grid-cols-3 gap-20 justify-items-center xl:grid-cols-2 lg:grid-cols-1">
+            <div class="flex items-center xl:col-span-2 lg:col-span-1 lg:mt-3">
+                <h1 class="text-4xl font-bold font-serif leading-snug text-center xs:text-2xl">WE <span class="text-green-400">ENGINEER</span> SOLUTIONS TO POLLUTION !</h1>
             </div>
 
             <div class="flex flex-col justify-center">
                 <figure class="flex justify-center">
-                    <img class="w-32 rounded-full" src="../images/ee-wmsu.jpg" alt="">
-                    <img class="w-32 rounded-full" src="../images/ee-eng.jpg" alt="">
-                    <img class="w-32 rounded-full" src="../images/ee-eng2.jpg" alt="">
-                    <img class="w-32 rounded-full" src="../images/eep.jpg" alt="">
+                    <img class="w-32 rounded-full sm:w-20 xs:w-12" src="../images/ee-wmsu.jpg" alt="">
+                    <img class="w-32 rounded-full sm:w-20 xs:w-12" src="../images/ee-eng.jpg" alt="">
+                    <img class="w-32 rounded-full sm:w-20 xs:w-12" src="../images/ee-eng2.jpg" alt="">
+                    <img class="w-32 rounded-full sm:w-20 xs:w-12" src="../images/eep.jpg" alt="">
                 </figure>
                 <div class="mt-4">
-                    <p class="text-slate-400 text-center">© Evironmental Engineering. All rights reserved.</p>
+                    <p class="text-slate-400 text-center sm:text-xs">© Evironmental Engineering. All rights reserved.</p>
                 </div>
             </div>
 
             
 
-            <div class="flex flex-col gap-2">
-                <h1 class="text-5xl font-bold font-serif">Contact:</h1>
-                <p class="text-md"><i class="fa-brands fa-facebook"></i> facebook.com/wmsuseepsc</p>
-                <p class="text-md"><i class="fa-solid fa-location-dot"></i> Western Mindanao State University, Normal Rd, Zamboanga, Zamboanga City, Philippines, 7000</p>
-                <p class="text-md"><i class="fa-solid fa-envelope"></i> seepwmsusc@gmail.com</p>
+            <div class="flex justify-center items-center text-center sm:text-xs">
+                <div class="flex flex-col gap-3">
+                    <h1 class="text-5xl font-bold font-serif">Contact:</h1>
+                    <p class="text-md"><i class="fa-brands fa-facebook"></i> facebook.com/wmsuseepsc</p>
+                    <p class="text-md lg:w-80"><i class="fa-solid fa-location-dot"></i> Western Mindanao State University, Normal Rd, Zamboanga, Zamboanga City, Philippines, 7000</p>
+                    <p class="text-md"><i class="fa-solid fa-envelope"></i> seepwmsusc@gmail.com</p>
+                </div>
             </div>
         </main>
     </footer>
+
+    <script src="../js/landing-page.js"></script>
 </body>
 </html>
