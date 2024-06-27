@@ -50,18 +50,12 @@
 // heading.setAttribute('id', 'greet');
 
 
-// const revealBtn = document.querySelector('.reveal-btn');
-// const hiddenContent = document.querySelector('.hidden-content');
+const revealBtn = document.querySelector('.reveal-btn');
+const hiddenContent = document.querySelector('.hidden-content');
 
-// function revealContent() {
-//     if(hiddenContent.classList.contains('hidden')){
-//         hiddenContent.classList.remove('hidden');
-//     }else{
-//         hiddenContent.classList.add('hidden');
-//     }
-// }
-
-// revealBtn.addEventListener('click', revealContent);
+revealBtn.addEventListener('click', () =>{
+    hiddenContent.classList.toggle('hidden');
+})
 
 
 
@@ -119,3 +113,22 @@ window.addEventListener('click', function(e){
         popup.style.display = 'none';
     }
 });
+
+const btnReveal = document.querySelectorAll('.reveal');
+const hidden = document.querySelectorAll('.hidden-text');
+const tago1 = document.querySelectorAll('.tago1');
+const tago2 = document.querySelectorAll('.tago2');
+
+
+for (let i = 0; i < btnReveal.length; i++) {
+    btnReveal[i].addEventListener('click', () => {
+        hidden[i].classList.toggle('hidden');
+    });
+}
+
+for(let i = 0; i < btnReveal.length; i++){
+    btnReveal[i].addEventListener('click', ()=>{
+        tago1[i].classList.toggle('hidden');
+        tago2[i].classList.toggle('hidden');
+    })
+}

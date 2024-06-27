@@ -9,6 +9,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <title>Practice Javascript</title>
+    <style>
+        @keyframes down {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            };
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            };
+        }
+        .animation-down{
+            animation: down .3s ease-in-out;
+        }
+       
+    </style>
     
 </head>
 <body class="relative">
@@ -55,11 +71,53 @@
         <button class="click bg-red-400 p-2 rounded-md mt-6">Click here</button>
     </section>
 
-    <section id="pop" class="hidden fixed top-0 left-0 right-0 bottom-0 h-screen backdrop-blur-sm bg-[#00000085] ">
+    <section id="pop" class="hidden transition fixed top-0 left-0 right-0 bottom-0 h-screen backdrop-blur-sm bg-[#00000085] animation-down">
         <div class="flex justify-center items-center h-full">
             <h1 class="text-white w-2/4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint at temporibus, inventore qui laudantium non aspernatur eos iste ab saepe delectus ducimus modi debitis atque fuga nesciunt sequi odit distinctio?</h1>
             <span class="ekis text-white text-4xl hover:scale-110 transition">&times;</span>
         </div>
+    </section>
+
+
+    <section class="bg-green-300 flex h-screen justify-center items-center">
+        <main class="flex flex-col justify-center items-center border-4 p-10 rounded-lg"> 
+            <header><h1>Frequently asked questions?</h1></header>
+            <section class="w-[50vw] text-4xl font-bold text-white border-b-4 p-2 flex justify-between reveal ">
+                <h1>What is the bla bla bla?</h1>
+                <span class="tago1"><i class="fa-solid fa-plus"></i></span>
+                <span class="hidden tago2"><i class="fa-solid fa-minus"></i></span>
+            </section>
+            <section class="w-[50vw] text-2xl hidden hidden-text animation-down transition ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, corporis aperiam! Tempore, blanditiis perferendis rerum quis quo ea error corrupti exercitationem eum reiciendis natus esse fugiat ab ipsa maiores quod!
+            </section>
+
+            <section class="w-[50vw] text-4xl font-bold text-white border-b-4 p-2 flex justify-between reveal ">
+                <h1>What is the bla bla bla?</h1>
+                <span class="tago1"><i class="fa-solid fa-plus"></i></span>
+                <span class="hidden tago2"><i class="fa-solid fa-minus"></i></span>
+            </section>
+            <section class="w-[50vw] text-2xl hidden hidden-text animation-down transition ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, corporis aperiam! Tempore, blanditiis perferendis rerum quis quo ea error corrupti exercitationem eum reiciendis natus esse fugiat ab ipsa maiores quod!
+            </section>
+
+            <section class="w-[50vw] text-4xl font-bold text-white border-b-4 p-2 flex justify-between reveal ">
+                <h1>What is the bla bla bla?</h1>
+                <span class="tago1"><i class="fa-solid fa-plus"></i></span>
+                <span class="hidden tago2"><i class="fa-solid fa-minus"></i></span>
+            </section>
+            <section class="w-[50vw] text-2xl hidden hidden-text animation-down transition ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, corporis aperiam! Tempore, blanditiis perferendis rerum quis quo ea error corrupti exercitationem eum reiciendis natus esse fugiat ab ipsa maiores quod!
+            </section>
+
+            <section class="w-[50vw] text-4xl font-bold text-white border-b-4 p-2 flex justify-between reveal ">
+                <h1>What is the bla bla bla?</h1>
+                <span class="tago1"><i class="fa-solid fa-plus"></i></span>
+                <span class="hidden tago2"><i class="fa-solid fa-minus"></i></span>
+            </section>
+            <section class="w-[50vw] text-2xl hidden hidden-text animation-down transition ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, corporis aperiam! Tempore, blanditiis perferendis rerum quis quo ea error corrupti exercitationem eum reiciendis natus esse fugiat ab ipsa maiores quod!
+            </section>
+        </main>
     </section>
 
     <script src="practice.js"></script> 
