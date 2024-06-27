@@ -50,18 +50,72 @@
 // heading.setAttribute('id', 'greet');
 
 
-const revealBtn = document.querySelector('.reveal-btn');
-const hiddenContent = document.querySelector('.hidden-content');
+// const revealBtn = document.querySelector('.reveal-btn');
+// const hiddenContent = document.querySelector('.hidden-content');
 
-function revealContent() {
-    if(hiddenContent.classList.contains('hidden')){
-        hiddenContent.classList.remove('hidden');
-    }else{
-        hiddenContent.classList.add('hidden');
+// function revealContent() {
+//     if(hiddenContent.classList.contains('hidden')){
+//         hiddenContent.classList.remove('hidden');
+//     }else{
+//         hiddenContent.classList.add('hidden');
+//     }
+// }
+
+// revealBtn.addEventListener('click', revealContent);
+
+
+
+
+// document.querySelector('.btn-click').addEventListener('click', function(e){
+    
+//     const pindot = e.target;
+
+//     if(pindot.matches('button')){
+//         pindot.style.backgroundColor = 'red'
+//     }
+// });
+
+let sinasabi = document.querySelector('.sinasabi');
+let nagsabi = document.querySelector('.nagsabi');
+let pindot = document.querySelector('.btn-pindot');
+
+const mgaQuotes = [{
+    sinasabi: 'pogi ko',
+    nagsabi: 'talagang pogi'
+},
+{
+    sinasabi: 'awdawdadwa',
+    nagsabi: 'awdawdawdd'
+},
+];
+
+pindot.addEventListener('click', function(){
+    let random = Math.floor(Math.random() * mgaQuotes.length);
+
+
+    sinasabi.innerText = mgaQuotes[random].sinasabi;
+    nagsabi.innerText = mgaQuotes[random].nagsabi;
+})
+
+
+
+
+
+const click = document.querySelector('.click');
+const popup = document.querySelector('#pop');
+const closez = document.querySelector('.ekis');
+
+click.addEventListener('click', function(){
+    popup.style.display = 'block';
+});
+
+closez.addEventListener('click', function(){
+    popup.style.display = 'none';
+});
+
+
+window.addEventListener('click', function(e){
+    if (e.target === popup) {
+        popup.style.display = 'none';
     }
-}
-
-revealBtn.addEventListener('click', revealContent);
-
-
-
+});

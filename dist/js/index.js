@@ -20,3 +20,15 @@ function hideImg() {
     }
 }
 revealBtn.addEventListener('click', hideImg);
+
+
+const pop = document.querySelector('.pop');
+const popup = document.querySelector('.popup');
+
+pop.addEventListener('mouseenter', function(){
+    popup.style.display = 'block';
+});
+
+pop.addEventListener('mouseleave', function(){
+    popup.style.display = 'none';
+});

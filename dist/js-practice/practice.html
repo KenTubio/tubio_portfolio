@@ -11,8 +11,8 @@
     <title>Practice Javascript</title>
     
 </head>
-<body>
-    <main class="h-screen w-full bg-slate-400 text-white flex-col">
+<body class="relative">
+    <main class=" w-full bg-slate-400 text-white flex-col">
         <header class="bg-green-500 p-4 text-3xl">
             <nav class="flex justify-between">
                 <ul class="flex gap-7 ">
@@ -29,23 +29,39 @@
 
         <div class="border-2 border-green-600 rounded-lg p-3 w-40">
             <h1 class="mb-4">Hello world</h1>
-            <button onclick="alert('hi ilove js')" class="bg-gray-600 px-4 py-2 rounded-md hover:scale-105">Click Me!</button>
+            <button class="btn-click bg-gray-600 px-4 py-2 rounded-md hover:scale-105">Click Me!</button>
         </div>
-    -------------------------------------------------------------------------------
 
-
-
-    <div class="border-2 border-green-600 rounded-lg p-3 w-40">
-        <h1 class="mb-4">js pop up</h1>
-        <button id="btn-js" class="reveal-btn bg-gray-600 px-4 py-2 rounded-md hover:scale-105">Click Me instead!</button>
-    </div>
-    <div class="hidden-content hidden border-2 border-green-600 rounded-lg p-3 w-80">
-        <p class="w-72">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam fugiat nam, omnis molestiae consequatur architecto nobis sapiente quia ad quo totam magnam sed veritatis reiciendis dolorum, tempore repellat? Maiores, ad.</p>
-    </div>
+        <div class="box border-2 border-green-600 rounded-lg p-3 w-40">
+            <h1 class="mb-4">js pop up</h1>
+            <button id="btn-js" class="reveal-btn bg-gray-600 px-4 py-2 rounded-md hover:scale-105">Click Me instead!</button>
+        </div>
+        <div class="hidden-content hidden border-2 border-green-600 rounded-lg p-3 w-80">
+            <p class="w-72">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam fugiat nam, omnis molestiae consequatur architecto nobis sapiente quia ad quo totam magnam sed veritatis reiciendis dolorum, tempore repellat? Maiores, ad.</p>
+        </div>
     
     
     </main>
 
-    <script src="practice.js"></script>
+
+    <section>
+        <h1 class="text-4xl text-green-900 font-bold">TESTING AREA</h1>
+        <p class="sinasabi">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore saepe tempora tenetur iste eos natus quod aliquid suscipit. Cupiditate repellat est, similique porro perspiciatis illum. Assumenda odio aspernatur totam voluptatibus?</p>
+
+        <span class="nagsabi">tao to dito</span>
+        <br>
+        <button class="btn-pindot bg-red-400 p-2 rounded-md">Pindot</button>
+        <br>
+        <button class="click bg-red-400 p-2 rounded-md mt-6">Click here</button>
+    </section>
+
+    <section id="pop" class="hidden fixed top-0 left-0 right-0 bottom-0 h-screen backdrop-blur-sm bg-[#00000085] ">
+        <div class="flex justify-center items-center h-full">
+            <h1 class="text-white w-2/4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint at temporibus, inventore qui laudantium non aspernatur eos iste ab saepe delectus ducimus modi debitis atque fuga nesciunt sequi odit distinctio?</h1>
+            <span class="ekis text-white text-4xl hover:scale-110 transition">&times;</span>
+        </div>
+    </section>
+
+    <script src="practice.js"></script> 
 </body>
 </html>
