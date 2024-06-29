@@ -132,3 +132,65 @@ for(let i = 0; i < btnReveal.length; i++){
         tago2[i].classList.toggle('hidden');
     })
 }
+
+
+//timer to dito
+const play = document.querySelector('.play');
+const reset = document.querySelector('.reset');
+
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+let start = null;
+
+function timer (){
+    seconds ++
+
+    if(seconds / 60 === 1){
+        seconds = 0;
+        minutes ++;
+        if(minutes / 60 === 1){
+            minutes = 0;
+            hours ++;
+        }
+    }
+
+    let secondsDisplay = seconds;
+    let minutesDisplay = minutes;
+    let hoursDisplay = hours;
+
+    if(seconds < 10){
+        secondsDisplay = '0' + seconds.toString();
+    }else{
+        secondsDisplay = seconds;
+    }
+    if(minutes < 10){
+        minutesDisplay = '0' + minutes.toString();
+    }else{
+        minutesDisplay = minutes;
+    }
+    if(hours < 10){
+        hoursDisplay = '0' + hours.toString();
+    }else{
+        hoursDisplay = hours;
+    }
+
+    document.querySelector('.timer').innerText = hoursDisplay + ':' + minutesDisplay + ':' + secondsDisplay;
+}
+
+play.addEventListener('click', ()=>{
+    if(!start){
+        start = window.setInterval(timer, 1);
+    }else{
+        clearInterval(start);
+        start = null;
+    }
+})
+
+reset.addEventListener('click', ()=>{
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+
+    document.querySelector('.timer').innerText = '00:00:00';
+})

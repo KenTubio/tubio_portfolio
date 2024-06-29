@@ -1,7 +1,8 @@
 const revealBtn = document.querySelector('.reveal');
 const revealBtn2 = document.querySelector('.reveal2');
 const hiddenContent = document.querySelector('.hidden-nav');
-const imghide = document.querySelector('.hide-img')
+const imghide = document.querySelector('.hide-img');
+
 
 
 function toggle (){
@@ -13,3 +14,4 @@ function toggle (){
 
 revealBtn.addEventListener('click', toggle);
 revealBtn2.addEventListener('click', toggle);
+
