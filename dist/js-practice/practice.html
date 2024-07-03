@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="box-border">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -131,6 +131,21 @@
                 <button class="reset border-4 p-2 rounded-md hover:scale-110"><i class="fa-solid fa-reply"></i></button>
             </div>
         </main>
+    </section>
+
+    <section class="h-screen bg-yellow-200 flex justify-center items-center flex-col">
+        <div>
+            <h1 class="text-4xl font-mono font-bold text-center">Todo List</h1>
+            <div class="flex justify-center items-center gap-2 mb-2">
+                <input class="bg-slate-200 text-slate-800 p-3 rounded-lg task-container" type="text" placeholder="Enter task...">
+                <i class="fa-solid fa-plus bg-blue-500 p-3 rounded-lg text-white hover:scale-105 task-btn"></i>
+            </div>
+            <main class="flex flex-col max-h-72 overflow-auto w-full">
+                <div class="task-added-container bg-yellow-200 mt-2 flex flex-col">
+                
+            </div>
+        </main>
+        </div>
     </section>
 
     <script src="practice.js"></script> 

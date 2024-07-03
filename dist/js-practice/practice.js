@@ -194,3 +194,52 @@ reset.addEventListener('click', ()=>{
 
     document.querySelector('.timer').innerText = '00:00:00';
 })
+
+
+
+const taskBtn = document.querySelector('.task-btn');
+const taskContainer = document.querySelector('.task-container');
+const taskAdded = document.querySelector('.task-added-container');
+
+taskBtn.addEventListener('click',  ()=>{
+
+    if(taskContainer.value === ""){
+        alert('PLEASE ENTER YOUR TASK!');
+    }else{
+
+        let taskDiv = document.createElement('div');
+        taskDiv.classList.add('flex', 'justify-between', 'items-center', 'mb-2', 'bg-green-200', 'p-1', 'rounded-md')
+
+        taskAdded.appendChild(taskDiv);
+
+        let taskContent = document.createElement('span');
+        taskContent.innerText = taskContainer.value;
+        taskDiv.appendChild(taskContent);
+
+        
+        let iconContainer = document.createElement('div');
+        iconContainer.classList.add('flex', 'gap-2');
+        taskDiv.appendChild(iconContainer);
+
+
+        let checkBtn = document.createElement('i');
+        checkBtn.classList.add('fa-solid', 'fa-check', 'bg-green-500', 'p-3', 'rounded-lg', 'text-white', 'hover:scale-105');
+        iconContainer.appendChild(checkBtn);
+      
+        let deleteBtn = document.createElement('i');
+        deleteBtn.classList.add('fa-solid', 'fa-trash', 'bg-red-500', 'p-3', 'rounded-lg', 'text-white', 'hover:scale-105');
+        iconContainer.appendChild(deleteBtn);
+
+
+        deleteBtn.addEventListener('click', ()=>{
+            taskDiv.classList.add('hidden');
+        })
+
+        checkBtn.addEventListener('click', ()=>{
+            taskContent.classList.toggle('line-through');
+        })
+
+
+        taskContainer.value = ""; 
+    }
+})
