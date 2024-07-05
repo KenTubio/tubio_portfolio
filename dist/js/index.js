@@ -15,3 +15,44 @@ function toggle (){
 revealBtn.addEventListener('click', toggle);
 revealBtn2.addEventListener('click', toggle);
 
+
+
+
+
+
+
+const homeLink = document.querySelector('#home-link');
+const aboutLink = document.querySelector('#about-link');
+const projectsLink = document.querySelector('#project-link');
+const contactsLink = document.querySelector('#contacts-link');
+
+
+function removeToggle (){
+    homeLink.classList.remove('before:w-full');
+    contactsLink.classList.remove('before:w-full');
+    aboutLink.classList.remove('before:w-full');
+    projectsLink.classList.remove('before:w-full');
+}
+
+
+homeLink.addEventListener('click', ()=>{
+    removeToggle()
+    homeLink.classList.toggle('before:w-full');
+})
+
+aboutLink.addEventListener('click', ()=>{
+    removeToggle()
+    aboutLink.classList.toggle('before:w-full');
+})
+
+projectsLink.addEventListener('click', ()=>{
+    removeToggle()
+    projectsLink.classList.toggle('before:w-full');
+})
+
+contactsLink.addEventListener('click', ()=>{
+    removeToggle()
+    contactsLink.classList.toggle('before:w-full');
+})
+
+
