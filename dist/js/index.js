@@ -1,3 +1,4 @@
+//toggle the nav responsiveness
 const revealBtn = document.querySelector('.reveal');
 const revealBtn2 = document.querySelector('.reveal2');
 const hiddenContent = document.querySelector('.hidden-nav');
@@ -18,9 +19,7 @@ revealBtn2.addEventListener('click', toggle);
 
 
 
-
-
-
+//nav link when clicked
 const homeLink = document.querySelector('#home-link');
 const aboutLink = document.querySelector('#about-link');
 const projectsLink = document.querySelector('#project-link');
@@ -54,5 +53,6 @@ contactsLink.addEventListener('click', ()=>{
     removeToggle()
     contactsLink.classList.toggle('before:w-full');
 })
+
 
 
