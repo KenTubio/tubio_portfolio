@@ -19,12 +19,12 @@
         <header id="header" class="flex items-center justify-between fixed left-0 right-0 top-0 z-[99] lg:items-start px-5 bg-green-400">
             <nav class="flex items-center gap-20">
                 <img id="logo-img" class="w-60 sm:w-40" src="../images/logo-ecommerce.png" alt="">
-                <ul id="nav" class="flex gap-5 text-white text-xl font-rubik font-[500] lg:hidden lg:h-screen lg:flex-col lg:pt-16 lg:gap-9">
-                    <li><a class="hover:bg-green-950 p-3 rounded-lg" href="">Shop</a></li>
+                <ul id="nav" class="flex gap-5 text-white text-xl font-rubik font-[500] lg:hidden lg:h-screen lg:flex-col lg:pt-16 lg:gap-9 sm:h-full sm:pb-10">
                     <li><a class="hover:bg-green-950 p-3 rounded-lg" href="#new-arrivals">New Arrivals</a></li>
-                    <li><a class="hover:bg-green-950 p-3 rounded-lg" href="">Contact</a></li>
-                    <li><a class="hover:bg-green-950 p-3 rounded-lg" href="">Reviews</a></li>
                     <li><a class="hover:bg-green-950 p-3 rounded-lg" href="#best-sellers">Best Sellers</a></li>
+                    <li><a class="hover:bg-green-950 p-3 rounded-lg" href="#reviews">Reviews</a></li>
+                    <li><a class="hover:bg-green-950 p-3 rounded-lg" href="#latest-news">Latest News</a></li>
+                    <li><a class="hover:bg-green-950 p-3 rounded-lg" href="#contacts">Contact</a></li>
                 </ul>
             </nav>
             <figure class="text-xl text-slate-800 gap-2 flex items-center">
@@ -136,7 +136,7 @@
     <section class="bg-[#9f612a]">
         <main class="flex lg:flex-col lg:justify-center lg:items-center">
             <figure class="w-2/4 lg:w-full">
-                <img class="w-full h-full" src="../images/superfood.jpg" alt="">
+                <img class="w-full h-full object-cover" src="../images/superfood.jpg" alt="">
             </figure>
 
             <article class="p-20 w-2/4 flex flex-col justify-center gap-10 lg:w-full sm:p-10">
@@ -294,7 +294,180 @@
         </main>
     </section>
 
-  
+    <section id="reviews" class="xl:justify-evenly lg:h-full lg:py-24 sm:p-16 lg:flex-col lg:gap-20 flex justify-between items-center bg-cover bg-center bg-no-repeat h-[35rem] pl-10 " style="background-image: url(../images/Wallpaper.jpg);">
+        <div class="relative z-50 flex justify-center items-center flex-col px-8 sm:px-4 rounded-lg gap-4 h-96 bg-green-900 sm:h-60">
+            <!-- gulay image to -->
+            <img class="absolute w-52 -top-24 -right-36 sm:-top-16 sm:left-14 z-0 sm:w-28" src="../images/leaf-2-removebg-preview.png" alt="">
+            
+            <h1 class="text-7xl font-bold text-yellow-500 sm:text-5xl">4.9</h1>
+            <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-white text-2xl sm:text-xs">Trust score of 999 reviewers!</p>
+        </div>
+
+
+        <article class="flex flex-col gap-3 relative z-50">
+            <div class="flex gap-2 z-50">
+                <img class="w-16 rounded-full sm:w-12" src="../images/me.jpg" alt="">
+                <div class="flex flex-col mt-2">
+                    <span class="text-yellow-400 font-rubik">Gojo Satrulng</span>
+                    <span class="text-gray-200 text-sm italic">KCC Megamall</span>
+                </div>
+            </div>
+
+            <div class="w-96 sm:w-full text-justify text-white font-bold font-rubik sm:text-sm z-50">
+                <p class="leading-8">" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ex quo minus laboriosam velit eaque dolores inventore sapiente eligendi reprehenderit iure incidunt nulla, aliquid esse praesentium deleniti tenetur ullam at? "</p>
+            </div>
+
+            <div class="flex justify-end gap-2 text-xl z-50">
+                <i class="fa-solid fa-heart text-red-400"></i>
+                <i class="fa-solid fa-face-laugh-beam text-blue-600"></i>
+            </div>
+            <img class="absolute -top-16 left-16 blur-sm brightness-50 z-0 sm:rotate-90 sm:w-28 sm:left-20" src="../images/leafbg.png" alt="">
+        </article>
+
+        <div class="w-96 bg-cover h-full bg-no-repeat bg-center xl:hidden" style="background-image: url(../images/newbg2.png);">
+        </div>
+    </section>
+
+    <section id="latest-news" class="p-24">
+        <header>
+            <h1 class="font-bold text-3xl text-green-800 mb-8"><i class="fa-regular fa-circle"></i> Latest News</h1>
+        </header>
+        <main class="w-full h-[30rem] flex gap-10 lg:flex-col lg:h-full">
+            <figure class="w-full h-full relative">
+                <img class="w-full  h-full object-cover rounded-md brightness-50 lg:h-96" src="../images/fig1.jpg" alt="">
+                <div class="absolute bottom-10 left-10 text-white flex flex-col gap-2">
+                    <a class="bg-yellow-500 w-40 text-center p-1 rounded-md mb-3 hover:scale-105 transition" href="">Read More !</a>
+                    <span class="text-slate-300">
+                        December 01, 2024 / <i class="fa-regular fa-user"></i> by Admin / <i class="fa-regular fa-heart"></i>
+                    </span>
+                    <h1 class="font-rubik font-bold text-white text-2xl">Power up with wholesome snacks!</h1>
+                </div>
+            </figure>
+                
+            <article class="w-full h-full flex flex-col gap-8">
+                <div class="flex gap-6 sm:relative">
+                    <img class="w-56 h-full object-cover rounded-md lg:w-80 md:w-52 sm:w-full sm:brightness-50 sm:h-72" src="../images/vege5-section2.jpg" alt="">
+                    <div class="flex flex-col gap-2 sm:absolute sm:left-5 sm:bottom-5">
+                        <span class="text-green-700 xl:text-xs lg:text-lg md:text-xs sm:text-slate-300">
+                            December 01, 2024 / <i class="fa-regular fa-user"></i> by Admin / <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <h1 class="font-rubik font-bold text-green-800 text-2xl xl:text-xl sm:text-white md:text-2xl lg:text-3xl sm:text-lg">Power up with wholesome snacks!</h1>
+                        <p class="text-base text-slate-500 italic font-light xl:text-sm lg:text-lg md:text-xs sm:text-slate-300">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit. Earum, perspiciatis...
+                        </p>
+                        <a class="text-yellow-300 underline-offset-4 underline cursor-pointer" href="">Read More!</a>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 sm:relative">
+                    <img class="w-56 h-full object-cover rounded-md lg:w-80 md:w-52 sm:w-full sm:brightness-50 sm:h-72" src="../images/vege5-section2.jpg" alt="">
+                    <div class="flex flex-col gap-2 sm:absolute sm:left-5 sm:bottom-5">
+                        <span class="text-green-700 xl:text-xs lg:text-lg md:text-xs sm:text-slate-300">
+                            December 01, 2024 / <i class="fa-regular fa-user"></i> by Admin / <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <h1 class="font-rubik font-bold text-green-800 text-2xl xl:text-xl sm:text-white md:text-2xl lg:text-3xl sm:text-lg">Power up with wholesome snacks!</h1>
+                        <p class="text-base text-slate-500 italic font-light xl:text-sm lg:text-lg md:text-xs sm:text-slate-300">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit. Earum, perspiciatis...
+                        </p>
+                        <a class="text-yellow-300 underline-offset-4 underline cursor-pointer" href="">Read More!</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+
+    <footer id="contacts">
+        <header class="bg-green-700 grid grid-cols-4 justify-items-center p-7">
+            <div class="flex gap-3">
+                <i class="fa-solid fa-truck bg-green-300 text-4xl p-3 rounded-full"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium">Free Shippping</span>
+                    <span class="text-slate-300 italic text-base">On selected items</span>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <i class="fa-solid fa-phone-volume bg-green-300 text-4xl p-3 rounded-full"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium">Give Us A Call</span>
+                    <span class="text-slate-300 italic text-base">(+63) 923232323</span>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <i class="fa-solid fa-envelope-open bg-green-300 text-4xl p-3 rounded-full"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium">Email Us</span>
+                    <span class="text-slate-300 italic text-base">sample@gmail.sample</span>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <i class="fa-solid fa-users bg-green-300 text-4xl p-3 rounded-full"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium">Community</span>
+                    <span class="text-slate-300 italic text-base">Shop with purpose</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="bg-green-900 p-20 flex gap-10 flex-col">
+            <article class="grid grid-cols-4 justify-items-center">
+                <div>
+                    <h1 class="text-white text-xl font-medium mb-3">The Company</h1>
+                    <p class="mb-4 text-slate-400 w-full text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatem modi mollitia iusto aperiam vel accusamus? Voluptas reprehenderit facilis numquam?</p>
+                    <figure class="flex gap-3">
+                        <img class="w-40 rounded-xl border-2 bg-slate-800 hover:scale-105 transition" src="../images/googleplay.jpg" alt="">
+                        <img class="w-40 rounded-xl border-2 bg-slate-800 hover:scale-105 transition" src="../images/applestore.jpg" alt="">
+                    </figure>
+                </div>
+    
+                <div>
+                    <h1 class="text-white text-xl font-medium mb-3">Information</h1>
+                    <ul class="italic text-slate-400">
+                        <li>About us</li>
+                        <li>Blog</li>
+                        <li>Check Out</li>
+                        <li>contact</li>
+                        <li>Service</li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h1 class="text-white text-xl font-medium mb-3">Categories</h1>
+                    <ul class="italic text-slate-400">
+                        <li>Fruits and Vegetables</li>
+                        <li>Dairy Products</li>
+                        <li>Package Foods</li>
+                        <li>Beverage</li>
+                        <li>Health and Wellness</li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h1 class="text-white text-xl font-medium mb-3">My Account</h1>
+                    <ul class="italic text-slate-400">
+                        <li>Account</li>
+                        <li>Shipping</li>
+                        <li>Order Status</li>
+                        <li>Shipping Cart</li>
+                        <li>Our Cart</li>
+                    </ul>
+                </div>
+            </article>
+
+            <hr>
+            
+            dwd
+        </main>
+        
+    </footer>
+
+
     <script src="../js/ecommerce.js"></script>
 </body>
 </html>

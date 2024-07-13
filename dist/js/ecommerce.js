@@ -23,7 +23,11 @@ burgerIcon.addEventListener("click", () => {
   header.classList.toggle("bg-green-700");
   logoImg.classList.toggle("lg:hidden");
   header.classList.toggle("lg:left-2/4");
+  header.classList.add('sm:left-0')
 });
+
+
+
 
 
 //images slider sa new  arrivals
