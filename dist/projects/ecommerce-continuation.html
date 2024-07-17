@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../output.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../images/logo-ecommerce.png" type="image/x-icon">
+    <title>Buy items here</title>
+  
 </head>
-<body>
-    <h1>WALA PA DITO DAWGLORD, WAIT LNG</h1>
+<body class="bg-slate-200 font-rubik">
+    <main>
+        <header class="fixed left-0 right-0 top-0 bg-green-400 px-32 py-3">
+            <nav class="flex justify-between text-sm font-sans">
+                <div class="flex gap-2">
+                    <span class="hover:underline">Start Selling</span>
+                    <span class="text-slate-500">|</span>
+                    <span class="hover:underline">Follow us on <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></span>
+                </div>
+
+                <div class="flex gap-4">
+                    <span class="hover:underline"><i class="fa-solid fa-bell"></i> Notifications</span>
+                    <span class="hover:underline"><i class="fa-solid fa-circle-question"></i> Help</span>
+                </div>
+            </nav>
+
+            <div class="flex justify-center items-center gap-10">
+                <img class="w-48" src="../images/logo-ecommerce.png" alt="">
+                <div class="w-full relative">
+                    <input class="w-full py-3 px-4 rounded-sm" type="text" name="" id="" placeholder="Search item..">
+                    <i class="fa-solid absolute right-2 top-1/2 transform -translate-y-1/2 fa-magnifying-glass bg-green-800 text-white py-3 px-6"></i>
+                </div>
+                <div id="cart" class="bg-white p-3 px-4 rounded-full lg:hidden relative mr-2 hover:scale-110 transition">
+                    <i class="fa-solid fa-cart-shopping "></i>
+                </div>
+            </div>
+        </header>
+
+        <section class="bg-white shadow-sm pt-44 px-32">
+            <figure class="flex gap-2 h-80">
+                <div class="relative w-4/6 h-full">
+                    <figure id="img-container" class="w-full h-full flex z-50 overflow-hidden shadow-lg">
+                        <div class="w-full shrink-0"><img class="h-full w-full object-cover" src="../images/ads1.jpg" alt=""></div>
+                        <div class="w-full shrink-0"><img class="h-full w-full object-cover" src="../images/ads2.jpg" alt=""></div>
+                        <div class="w-full shrink-0"><img class="h-full w-full object-cover" src="../images/ads3.jpg" alt=""></div>
+                        <div class="w-full shrink-0"><img class="h-full w-full" src="../images/shopee1.png" alt=""></div>
+                    </figure>
+                    
+                    <i id="before" class="fa-solid fa-chevron-left text-2xl border-2 font-bold absolute left-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-50 bg-[#00000080] text-white p-1 py-3"></i>
+                    <i id="next" class="fa-solid fa-chevron-right text-2xl border-2 font-bold absolute right-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-50 bg-[#00000080] text-white p-1 py-3"></i>
+                </div>
+                <figure class="w-2/6 flex flex-col gap-2 h-full shadow-lg">
+                    <img class="w-full h-2/4 object-cover object-center" src="../images/ads4.jpg" alt="">
+                    <img class="w-full h-2/4 object-cover object-center" src="../images/ads5.jpg" alt="">
+                </figure>
+            </figure>
+            
+            <nav class="p-3">
+                <ul class="flex justify-around">
+                    <li class="hover:border-2 hover:rounded-md p-2">
+                        <a class="flex flex-col items-center" href="">
+                            <img class="w-16" src="../images/fresh.png" alt="">
+                            <span>Fresh Produce</span>
+                        </a>
+                    </li>
+                    <li class="hover:border-2 hover:rounded-md p-2">
+                        <a class="flex flex-col items-center" href="">
+                            <img class="w-16" src="../images/poultry.png" alt="">
+                            <span>Meat and Poultry</span>
+                        </a>
+                    </li>
+                    <li class="hover:border-2 hover:rounded-md p-2">
+                        <a class="flex flex-col items-center" href="">
+                            <img class="w-16" src="../images/seafood.png" alt="">
+                            <span>Seafood</span>
+                        </a>
+                    </li>
+                    <li class="hover:border-2 hover:rounded-md p-2">
+                        <a class="flex flex-col items-center" href="">
+                            <img class="w-16" src="../images/dairy-products.png" alt="">
+                            <span>Dairy and Eggs</span>
+                        </a>
+                    </li>
+                    <li class="hover:border-2 hover:rounded-md p-2">
+                        <a class="flex flex-col items-center" href="">
+                            <img class="w-16" src="../images/drink.png" alt="">
+                            <span>Beverages</span>
+                        </a>
+                    </li>
+                    <li class="hover:border-2 hover:rounded-md p-2">
+                        <a class="flex flex-col items-center" href="">
+                            <img class="w-16" src="../images/snacks.png" alt="">
+                            <span>Snacks</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+        </section>
+
+        <section class="bg-white mt-5 mx-32">
+            wd
+        </section>
+    </main>
+
+    <script src="../js/ecomms-continuation.js"></script>
 </body>
 </html>

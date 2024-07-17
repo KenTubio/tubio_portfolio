@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../output.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../images/logo-ecommerce.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+   sm:text-sm  <link rel="shortcut icon" href="../images/logo-ecommerce.png" type="image/x-icon">
     <title>E-Commerce</title>
 </head>
 <body>
@@ -50,7 +48,7 @@
                 </div>
                 <p class="font-thin text-xl italic w-3/4 md:w-full">Shop Smart, Live Well, and Experience the Convenience of Fast Delivery with Freshness Guaranteed!</p>
             
-                <button class="bg-green-950 text-white px-16 py-5 rounded-full text-xl mt-5 hover:scale-105 hover:cursor-pointer z-50 transition"><a href="../projects/ecommerce-continuation.html">Shop Now!</a></button>
+                <button class="bg-green-950 text-white px-16 py-5 rounded-full text-xl mt-5 hover:scale-105 hover:cursor-pointer z-50 transition"><a href="../projects/ecommerce-continuation.html" target="_blank">Shop Now!</a></button>
             </section>
             
 
@@ -88,45 +86,75 @@
     <section id="new-arrivals" class="p-12 pt-32">
         <div class="flex justify-between">
             <h1 class="font-bold text-3xl text-green-800 mb-10"><i class="fa-regular fa-circle"></i> New Arrivals</h1>
-            <div class="text-2xl">
-                <i id="next-icon" class="fa-solid fa-arrow-right  p-3 rounded-full border-2 border-slate-800 mr-2 hover:scale-105 transition"></i>
-                <i id="previous-icon" class="fa-solid fa-arrow-left  p-3 rounded-full border-2 border-slate-800 hover:scale-105 transition"></i>
-            </div>
         </div>
 
-        <figure class="grid grid-cols-4 text-center lg:grid-cols-2 gap-5">
-            <figcaption class="flex flex-col justify-center items-center  gap-3">
-                <img class="h-3/5" src="../images/can-good1.jpg" alt="">
-                <span>Awesome Items hehe</span>
-                <span class="text-yellow-600 font-bold">₱379.99</span>
-                <hr class="border w-2/4 border-slate-500">
-                <button class="bg-green-900 w-2/4 text-white text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
-            </figcaption>
-
-            <figcaption class="flex flex-col justify-center items-center  gap-3">
-                <img class="h-3/5" src="../images/can-good2.jpg" alt="">
-                <span>Awesome Items hehe</span>
-                <span class="text-yellow-600 font-bold">₱379.99</span>
-                <hr class="border w-2/4 border-slate-500">
-                <button class="bg-green-900 w-2/4 text-white text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
-            </figcaption>
-
-            <figcaption class="flex flex-col justify-center items-center  gap-3">
-                <img class="h-3/5" src="../images/can-good3 (2).jpg" alt="">
-                <span>Awesome Items hehe</span>
-                <span class="text-yellow-600 font-bold">₱379.99</span>
-                <hr class="border w-2/4 border-slate-500">
-                <button class="bg-green-900 w-2/4 text-white text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
-            </figcaption>
-
-            <figcaption class="flex flex-col justify-center items-center  gap-3">
-                <img class="h-3/5" src="../images/can-good4 (2).jpg" alt="">
-                <span>Awesome Items hehe</span>
-                <span class="text-yellow-600 font-bold">₱379.99</span>
-                <hr class="border w-2/4 border-slate-500">
-                <button class="bg-green-900 w-2/4 text-white text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
-            </figcaption>
-        </figure>
+        <div id="container" class="flex relative transition">
+            <!-- arrow buttons -->
+            <i id="before" class="fa-solid fa-chevron-left text-2xl border-2 font-bold absolute left-0 top-1/2 transform  -translate-y-1/2 hover:scale-110 transition z-50 bg-green-900 text-white p-2"></i>
+            <i id="next" class="fa-solid fa-chevron-right text-2xl border-2  font-bold absolute right-0 top-1/2 transform  -translate-y-1/2 hover:scale-110 transition z-50 bg-green-900 text-white p-2"></i>
+            <figure id="card-container" class="flex relative overflow-x-hidden">
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/can-good1.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/can-good1.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/can-good1.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/can-good1.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/vege2-section2.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+    
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/vege3-section2.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+    
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/vege5-section2.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+    
+                <figcaption id class="w-1/4 lg:w-2/6 sm:w-2/4 flex-shrink-0 flex flex-col justify-center items-center  gap-3">
+                    <img class="h-3/5" src="../images/vege5-section2.jpg" alt="">
+                    <span>Awesome Items hehe</span>
+                    <span class="text-yellow-600 font-bold">₱379.99</span>
+                    <hr class="border w-2/4 border-slate-500">
+                    <button class="bg-green-900 w-2/4 text-white sm:text-sm text-lg py-2 rounded-full hover:scale-110 transition">Shop Now!</button>
+                </figcaption>
+            </figure>
+            
+        </div>
 
         <div class="text-center mt-20 font-rubik">
             <h1>Get hands on the best and fresh ingredients! <span class="text-yellow-500 underline underline-offset-4 under italic"><a href="">Shop all products!</a></span></h1>
@@ -146,13 +174,13 @@
                     <p class="text-white italic">Fuel your body with nutrient-rich power and be your best self, unlocking the potential for a life full of energy and vitality</p>
                 </div>
 
-                <div class="grid grid-cols-2 text-white gap-6">
+                <div class="grid grid-cols-2 text-white gap-6"sm:w-2/4 >
                     <div class="flex items-center gap-2">
                         <i class="fa-solid fa-leaf bg-white text-red-700 rounded-full p-3 text-3xl"></i>
                         <span class="text-lg xl:text-sm">Organic greens for a vibrant life.</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-weight-scale bg-white text-red-700 rounded-full p-3 text-3xl"></i>
+                      <i class="fa-solid fa-weight-scale bg-white text-red-700 rounded-full p-3 text-3xl"></i>
                         <span class="text-lg xl:text-sm">Nutrient-dense, calorie-smart.</span>
                     </div>
                     <div class="flex items-center gap-2">
@@ -335,7 +363,7 @@
         </div>
     </section>
 
-    <section id="latest-news" class="p-24">
+    <section id="latest-news" class="p-24 sm:p-7">
         <header>
             <h1 class="font-bold text-3xl text-green-800 mb-8"><i class="fa-regular fa-circle"></i> Latest News</h1>
         </header>
@@ -352,28 +380,28 @@
             </figure>
                 
             <article class="w-full h-full flex flex-col gap-8">
-                <div class="flex gap-6 sm:relative">
+                <div class="flex gap-6 sm:w-full sm:relative">
                     <img class="w-56 h-full object-cover rounded-md lg:w-80 md:w-52 sm:w-full sm:brightness-50 sm:h-72" src="../images/vege5-section2.jpg" alt="">
                     <div class="flex flex-col gap-2 sm:absolute sm:left-5 sm:bottom-5">
-                        <span class="text-green-700 xl:text-xs lg:text-lg md:text-xs sm:text-slate-300">
-                            December 01, 2024 / <i class="fa-regular fa-user"></i> by Admin / <i class="fa-regular fa-heart"></i>
+                        <span class="text-green-700 xl:text-[.6rem] lg:text-lg md:text-xs sm:text-slate-300">
+                            December 01, 2024 / <i sm:text-sm class="fa-regular fa-user"></i> by Admin / <i class="fa-regular fa-heart"></i>
                         </span>
-                        <h1 class="font-rubik font-bold text-green-800 text-2xl xl:text-xl sm:text-white md:text-2xl lg:text-3xl sm:text-lg">Power up with wholesome snacks!</h1>
-                        <p class="text-base text-slate-500 italic font-light xl:text-sm lg:text-lg md:text-xs sm:text-slate-300">
+                        <h1 class="font-rubik font-bold text-green-800 text-2xl xl:text-base sm:text-white md:text-2xl lg:text-3xl sm:text-lg">Power up with wholesome snacks!</h1>
+                        <p class="text-base text-slate-500 italic font-light xl:text-xs lg:text-lg md:text-xs sm:text-slate-300">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit. Earum, perspiciatis...
                         </p>
                         <a class="text-yellow-300 underline-offset-4 underline cursor-pointer" href="">Read More!</a>
                     </div>
                 </div>
 
-                <div class="flex gap-6 sm:relative">
+                <div class="flex gap-6 sm:w-full sm:relative">
                     <img class="w-56 h-full object-cover rounded-md lg:w-80 md:w-52 sm:w-full sm:brightness-50 sm:h-72" src="../images/vege5-section2.jpg" alt="">
                     <div class="flex flex-col gap-2 sm:absolute sm:left-5 sm:bottom-5">
-                        <span class="text-green-700 xl:text-xs lg:text-lg md:text-xs sm:text-slate-300">
-                            December 01, 2024 / <i class="fa-regular fa-user"></i> by Admin / <i class="fa-regular fa-heart"></i>
+                        <span class="text-green-700 xl:text-[.6rem] lg:text-lg md:text-xs sm:text-slate-300">
+                            December 01, 2024 / <i sm:text-sm class="fa-regular fa-user"></i> by Admin / <i class="fa-regular fa-heart"></i>
                         </span>
-                        <h1 class="font-rubik font-bold text-green-800 text-2xl xl:text-xl sm:text-white md:text-2xl lg:text-3xl sm:text-lg">Power up with wholesome snacks!</h1>
-                        <p class="text-base text-slate-500 italic font-light xl:text-sm lg:text-lg md:text-xs sm:text-slate-300">
+                        <h1 class="font-rubik font-bold text-green-800 text-2xl xl:text-base sm:text-white md:text-2xl lg:text-3xl sm:text-lg">Power up with wholesome snacks!</h1>
+                        <p class="text-base text-slate-500 italic font-light xl:text-xs lg:text-lg md:text-xs sm:text-slate-300">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit. Earum, perspiciatis...
                         </p>
                         <a class="text-yellow-300 underline-offset-4 underline cursor-pointer" href="">Read More!</a>
@@ -384,43 +412,43 @@
     </section>
 
     <footer id="contacts">
-        <header class="bg-green-700 grid grid-cols-4 justify-items-center p-7">
+        <header class="bg-green-700 grid grid-cols-4 justify-items-center p-7 lg:grid-cols-2 lg:gap-5 sm:grid-cols-1 sm:justify-items-start">
             <div class="flex gap-3">
-                <i class="fa-solid fa-truck bg-green-300 text-4xl p-3 rounded-full"></i>
+                <i class="fa-solid fa-truck bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
                 <div class="flex-col flex">
-                    <span class="text-white text-xl font-medium">Free Shippping</span>
-                    <span class="text-slate-300 italic text-base">On selected items</span>
+                    <span class="text-white text-xl font-medium lg:text-base">Free Shippping</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">On selected items</span>
                 </div>
             </div>
             <div class="flex gap-3">
-                <i class="fa-solid fa-phone-volume bg-green-300 text-4xl p-3 rounded-full"></i>
+                <i class="fa-solid fa-phone-volume bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
                 <div class="flex-col flex">
-                    <span class="text-white text-xl font-medium">Give Us A Call</span>
-                    <span class="text-slate-300 italic text-base">(+63) 923232323</span>
+                    <span class="text-white text-xl font-medium lg:text-base">Give Us A Call</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">(+63) 923232323</span>
                 </div>
             </div>
             <div class="flex gap-3">
-                <i class="fa-solid fa-envelope-open bg-green-300 text-4xl p-3 rounded-full"></i>
+                <i class="fa-solid fa-envelope-open bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
                 <div class="flex-col flex">
-                    <span class="text-white text-xl font-medium">Email Us</span>
-                    <span class="text-slate-300 italic text-base">sample@gmail.sample</span>
+                    <span class="text-white text-xl font-medium lg:text-base">Email Us</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">sample@gmail.sample</span>
                 </div>
             </div>
             <div class="flex gap-3">
-                <i class="fa-solid fa-users bg-green-300 text-4xl p-3 rounded-full"></i>
+                <i class="fa-solid fa-users bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
                 <div class="flex-col flex">
-                    <span class="text-white text-xl font-medium">Community</span>
-                    <span class="text-slate-300 italic text-base">Shop with purpose</span>
+                    <span class="text-white text-xl font-medium lg:text-base">Community</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">Shop with purpose</span>
                 </div>
             </div>
         </header>
 
-        <main class="bg-green-900 p-20 flex gap-10 flex-col">
-            <article class="grid grid-cols-4 justify-items-center">
-                <div>
+        <main class="bg-green-900 p-20 sm:p-10 flex gap-10 flex-col">
+            <article class="grid grid-cols-4 justify-items-center md:grid-cols-3 md:justify-items-start md:gap-10 sm:grid-cols-1">
+                <div class="md:col-span-3 sm:col-span-1">
                     <h1 class="text-white text-xl font-medium mb-3">The Company</h1>
                     <p class="mb-4 text-slate-400 w-full text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatem modi mollitia iusto aperiam vel accusamus? Voluptas reprehenderit facilis numquam?</p>
-                    <figure class="flex gap-3">
+                    <figure class="flex gap-3 sm:flex-col">
                         <img class="w-40 rounded-xl border-2 bg-slate-800 hover:scale-105 transition" src="../images/googleplay.jpg" alt="">
                         <img class="w-40 rounded-xl border-2 bg-slate-800 hover:scale-105 transition" src="../images/applestore.jpg" alt="">
                     </figure>
@@ -462,7 +490,15 @@
 
             <hr>
             
-            dwd
+            <article class="grid grid-cols-3 justify-items-center items-center lg:grid-cols-2 lg:gap-10 sm:grid-cols-1">
+                <h1 class="text-white font-medium  md:text-xs text-center">Copyright © 2024 <span class="text-blue-600">SUPHA</span>. All Rights Reserved.</h1>
+                <figure class="flex gap-2">
+                    <img class="w-16 h-10 rounded-lg" src="../images/gcash.png" alt="">
+                    <img class="w-16 h-10 rounded-lg" src="../images/maya.jpg" alt="">
+                    <img class="w-16 h-10 rounded-lg bg-white" src="../images/paypal.png" alt="">
+                </figure>
+                <h1 class="text-white font-medium lg:col-span-2 md:text-xs sm:col-span-1 text-center">Privacy and Cookie Policy |  Terms of Service</h1>
+            </article>
         </main>
         
     </footer>
