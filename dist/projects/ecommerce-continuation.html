@@ -6,40 +6,41 @@
     <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="../images/logo-ecommerce.png" type="image/x-icon">
-    <title>Buy items here</title>
+    <title>SUPHA! Shop smart, Shop wise!</title>
   
 </head>
-<body class="bg-slate-200 font-rubik">
+<body class="bg-slate-200 font-rubik" >
     <main>
-        <header class="fixed left-0 right-0 top-0 bg-green-400 px-32 py-3">
-            <nav class="flex justify-between text-sm font-sans">
-                <div class="flex gap-2">
+        <header class="fixed left-0 right-0 top-0 bg-green-400 px-32 py-3 z-50 lg:px-5 sm:px-2">
+            <nav class="flex justify-between text-sm font-sans sm:items-center ">
+                <div class="flex gap-2 sm:text-xs">
                     <span class="hover:underline">Start Selling</span>
                     <span class="text-slate-500">|</span>
                     <span class="hover:underline">Follow us on <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></span>
                 </div>
 
-                <div class="flex gap-4">
+                <div class="flex gap-4 sm:text-xs">
                     <span class="hover:underline"><i class="fa-solid fa-bell"></i> Notifications</span>
                     <span class="hover:underline"><i class="fa-solid fa-circle-question"></i> Help</span>
                 </div>
             </nav>
 
-            <div class="flex justify-center items-center gap-10">
-                <img class="w-48" src="../images/logo-ecommerce.png" alt="">
+            <div class="flex justify-center items-center gap-10 sm:pt-10 sm:gap-2">
+                <img class="w-48 lg:w-32 sm:w-28 sm:absolute sm:top-1" src="../images/logo-ecommerce.png" alt="">
                 <div class="w-full relative">
-                    <input class="w-full py-3 px-4 rounded-sm" type="text" name="" id="" placeholder="Search item..">
-                    <i class="fa-solid absolute right-2 top-1/2 transform -translate-y-1/2 fa-magnifying-glass bg-green-800 text-white py-3 px-6"></i>
+                    <input class="w-full py-3 px-4 rounded-sm sm:px-2 sm:py-2" type="text" name="" id="" placeholder="Search item..">
+                    <i class="fa-solid absolute right-2 top-1/2 transform -translate-y-1/2 fa-magnifying-glass bg-green-800 text-white py-3 px-6 sm:px-3 sm:py-2"></i>
                 </div>
-                <div id="cart" class="bg-white p-3 px-4 rounded-full lg:hidden relative mr-2 hover:scale-110 transition">
-                    <i class="fa-solid fa-cart-shopping "></i>
+                <div id="cart" class="bg-white p-3 px-4 rounded-full relative hover:scale-110 transition">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span id="cart-numdisplay" class="bg-red-700 text-white absolute px-2 rounded-full top-0">2</span>
                 </div>
             </div>
         </header>
 
-        <section class="bg-white shadow-sm pt-44 px-32">
-            <figure class="flex gap-2 h-80">
-                <div class="relative w-4/6 h-full">
+        <section class="bg-white shadow-sm pt-[10rem] px-32 lg:px-5">
+            <figure class="flex gap-2 h-80 sm:h-40">
+                <div class="relative w-4/6 h-full sm:w-full">
                     <figure id="img-container" class="w-full h-full flex z-50 overflow-hidden shadow-lg">
                         <div class="w-full shrink-0"><img class="h-full w-full object-cover" src="../images/ads1.jpg" alt=""></div>
                         <div class="w-full shrink-0"><img class="h-full w-full object-cover" src="../images/ads2.jpg" alt=""></div>
@@ -47,51 +48,65 @@
                         <div class="w-full shrink-0"><img class="h-full w-full" src="../images/shopee1.png" alt=""></div>
                     </figure>
                     
-                    <i id="before" class="fa-solid fa-chevron-left text-2xl border-2 font-bold absolute left-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-50 bg-[#00000080] text-white p-1 py-3"></i>
-                    <i id="next" class="fa-solid fa-chevron-right text-2xl border-2 font-bold absolute right-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-50 bg-[#00000080] text-white p-1 py-3"></i>
+                    <i id="before" class="fa-solid fa-chevron-left text-2xl border-2 font-bold absolute left-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-30 bg-[#00000080] text-white p-1 py-3 z"></i>
+                    <i id="next" class="fa-solid fa-chevron-right text-2xl border-2 font-bold absolute right-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-30 bg-[#00000080] text-white p-1 py-3"></i>
                 </div>
-                <figure class="w-2/6 flex flex-col gap-2 h-full shadow-lg">
+                <figure class="w-2/6 flex flex-col gap-2 h-full shadow-lg sm:hidden">
                     <img class="w-full h-2/4 object-cover object-center" src="../images/ads4.jpg" alt="">
                     <img class="w-full h-2/4 object-cover object-center" src="../images/ads5.jpg" alt="">
                 </figure>
             </figure>
             
-            <nav class="p-3">
-                <ul class="flex justify-around">
-                    <li class="hover:border-2 hover:rounded-md p-2">
-                        <a class="flex flex-col items-center" href="">
-                            <img class="w-16" src="../images/fresh.png" alt="">
-                            <span>Fresh Produce</span>
+            <nav class="p-3 sm:px-0">
+                <div class="sm:text-2xl text-4xl pt-3 pb-5 font-mono font-bold flex justify-center gap-2 text-green-700">
+                    <span class="animate-bounce [animation-delay:0ms]">C</span>
+                    <span class="animate-bounce [animation-delay:50ms]">A</span>
+                    <span class="animate-bounce [animation-delay:100ms]">T</span>
+                    <span class="animate-bounce [animation-delay:150ms]">E</span>
+                    <span class="animate-bounce [animation-delay:200ms]">G</span>
+                    <span class="animate-bounce [animation-delay:250ms]">O</span>
+                    <span class="animate-bounce [animation-delay:300ms]">R</span>
+                    <span class="animate-bounce [animation-delay:350ms]">I</span>
+                    <span class="animate-bounce [animation-delay:400ms]">E</span>
+                    <span class="animate-bounce [animation-delay:450ms]">S</span>
+                    <span class="animate-bounce [animation-delay:500ms]">!</span>
+
+                </div>
+                <ul class="grid grid-cols-6 lg:grid-cols-3 sm:gap-5 text-center">
+                    <li class="hover:border-2 hover:rounded-md">
+                        <a class="flex flex-col items-center" href="#vege-section">
+                            <img class="w-11 lg:w-9 sm:w-6" src="../images/fresh.png" alt="">
+                            <span class="lg:text-xs sm:text-[.6rem]">Fresh Produce</span>
                         </a>
                     </li>
-                    <li class="hover:border-2 hover:rounded-md p-2">
-                        <a class="flex flex-col items-center" href="">
-                            <img class="w-16" src="../images/poultry.png" alt="">
-                            <span>Meat and Poultry</span>
+                    <li class="hover:border-2 hover:rounded-md">
+                        <a class="flex flex-col items-center" href="#meat-section">
+                            <img class="w-11 lg:w-9 sm:w-6" src="../images/poultry.png" alt="">
+                            <span class="lg:text-xs sm:text-[.6rem]">Meat and Poultry</span>
                         </a>
                     </li>
-                    <li class="hover:border-2 hover:rounded-md p-2">
-                        <a class="flex flex-col items-center" href="">
-                            <img class="w-16" src="../images/seafood.png" alt="">
-                            <span>Seafood</span>
+                    <li class="hover:border-2 hover:rounded-md">
+                        <a class="flex flex-col items-center" href="#seafood-section">
+                            <img class="w-11 lg:w-9 sm:w-6" src="../images/seafood.png" alt="">
+                            <span class="lg:text-xs sm:text-[.6rem]">Seafood</span>
                         </a>
                     </li>
-                    <li class="hover:border-2 hover:rounded-md p-2">
-                        <a class="flex flex-col items-center" href="">
-                            <img class="w-16" src="../images/dairy-products.png" alt="">
-                            <span>Dairy and Eggs</span>
+                    <li class="hover:border-2 hover:rounded-md">
+                        <a class="flex flex-col items-center" href="#dairy-section">
+                            <img class="w-11 lg:w-9 sm:w-6" src="../images/dairy-products.png" alt="">
+                            <span class="lg:text-xs sm:text-[.6rem]">Dairy and Eggs</span>
                         </a>
                     </li>
-                    <li class="hover:border-2 hover:rounded-md p-2">
-                        <a class="flex flex-col items-center" href="">
-                            <img class="w-16" src="../images/drink.png" alt="">
-                            <span>Beverages</span>
+                    <li class="hover:border-2 hover:rounded-md">
+                        <a class="flex flex-col items-center" href="#beverage-section">
+                            <img class="w-11 lg:w-9 sm:w-6" src="../images/drink.png" alt="">
+                            <span class="lg:text-xs sm:text-[.6rem]">Beverages</span>
                         </a>
                     </li>
-                    <li class="hover:border-2 hover:rounded-md p-2">
-                        <a class="flex flex-col items-center" href="">
-                            <img class="w-16" src="../images/snacks.png" alt="">
-                            <span>Snacks</span>
+                    <li class="hover:border-2 hover:rounded-md">
+                        <a class="flex flex-col items-center" href="#snacks-section">
+                            <img class="w-11 lg:w-9 sm:w-6" src="../images/snacks.png" alt="">
+                            <span class="lg:text-xs sm:text-[.6rem]">Snacks</span>
                         </a>
                     </li>
                 </ul>
@@ -99,10 +114,1741 @@
             </nav>
         </section>
 
-        <section class="bg-white mt-5 mx-32">
-            wd
+        <section class="mx-32 px-6 max-h-[95vh] overflow-hidden lg:mx-2 sm:px-0">
+            <!-- VEGE SECTION TO DITO -->
+            <main id="vege-section" class="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-5 gap-5 sm:gap-1 pb-16 pt-7 xl:h-[95vh] xl:overflow-y-scroll overflow-x-hidden">
+                <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/mixveges.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Basket of Mix Vegetables</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/apples.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Juicy Red Apples</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/carrots.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Crunchy Baby Carrots</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lettuce.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Crisp Romaine Lettuce</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/tomatoes.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Vine-Ripened Tomatoes</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/oranges.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Sweet Navel Oranges</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/potatoes.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Russet Baking Potatoes</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cucomber.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Fresh Sliced Cucumbers</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/spinach.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Organic Baby Spinach</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/bellpepper.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Colorful Bell Peppers</span>
+                        <div class="text-le sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+            </main>
+            <!-- MEAT SECTION TO DITO -->
+            <main id="meat-section" class="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-5 gap-5 sm:gap-1 pb-16 pt-7 xl:h-[95vh] xl:overflow-y-scroll overflow-x-hidden">
+                <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/steak.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Grass-Fed Beef Steaks</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chicken.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Free-Range Chicken Breasts</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/pork.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Juicy Pork Chops</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/turkey.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Lean Ground Turkey</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lamb.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Tender Lamb Chops</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chocken thigh.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Organic Chicken Thighs</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/sausage.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Beef Sausages</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/tenderloin.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Boneless Pork Tenderloin</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/bacon.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Thick-Cut Bacon</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/duck.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Duck Breasts</span>
+                        <div class="text-le sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+            </main>
+            <!-- SEAFOOD SECTION TO DITO -->
+            <main id="seafood-section" class="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-5 gap-5 sm:gap-1 pb-16 pt-7 xl:h-[95vh] xl:overflow-y-scroll overflow-x-hidden">
+                <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/salmon.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Wild-Caught Salmon Fillets</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/shrimp.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Fresh Shrimp</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/King Crab.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Alaskan King Crab Legs
+                        </span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cod 👍.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Atlantic Cod Fillets</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/mahi.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Mahi-Mahi Steaks</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/Tuna-Terrific.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Ahi Tuna Steaks</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/scallops.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Fresh Sea Scallops</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/seabass.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Chilean Sea Bass</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lobster.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Lobster Tails</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/trout.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Rainbow Trout Fillets</span>
+                        <div class="text-le sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+            </main>
+            <!-- DAIRY AND EGGS SECTION TO DITO -->
+            <main id="dairy-section" class="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-5 gap-5 sm:gap-1 pb-16 pt-7 xl:h-[95vh] xl:overflow-y-scroll overflow-x-hidden">
+                <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chedder.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Cheddar Cheese Blocks</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/parmessan.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Parmesan Cheese</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/Organic Whole Milk.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex f sm:text-xslex-col gap-3 p-2">
+                        <span class="text-base">Organe sm:text-smc Whole Milk</span>
+                        <div class="text-base">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div  sm:flex-col sm:items-startclass="flex gap-2 items-center">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                   sm:text-xs          <span class="text-sm">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/yogurt.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Greek Yogurt Cups</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/eggs.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Cage-Free Eggs</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/butter.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Butter Sticks</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/kefir.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Probiotic Kefir</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/sourcream.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Sour Cream Tubs</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cottagecheese.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Fresh Cottage Cheese</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/creamcheese.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Cream Cheese Spread</span>
+                        <div class="text-le sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+            </main>
+            <!-- BEVERAGES SECTION TO DITO -->
+            <main id="beverage-section" class="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-5 gap-5 sm:gap-1 pb-16 pt-7 xl:h-[95vh] xl:overflow-y-scroll overflow-x-hidden">
+                <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/coldbrew.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Cold Brew Coffee</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/greentea.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Green Tea Bags</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/orangejuice.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Orange Juice</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/sparklingwater.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex f sm:text-xs flex-col gap-3 p-2">
+                        <span class="text-base sm:text-sm">Sparkling Water</span>
+                        <div class="text-base sm:text-xs">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs ">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/coconutwater.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Coconut Water</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/Coca-Cola.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-bas sm:text-xse">Coca-cola</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chocomilk.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Chocolate Milk</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lemonade.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-ba sm:text-xsse">Lemonade</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/energydrink.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Energy Drink</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/icetea.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-ba sm:text-xsse">Iced Tea</span>
+                        <div class="text-le sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+            </main>
+            <!-- SNACKS SECTION TO DITO -->
+            <main id="snacks-section" class="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-5 gap-5 sm:gap-1 pb-16 pt-7 xl:h-[95vh] xl:overflow-y-scroll overflow-x-hidden">
+                <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/potatochips.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Potato Chips</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/popcorn.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-b sm:text-xsase">Popcorn</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/granolabars.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Granola Bars</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/mixednuts.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Mixed Nuts</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chocolatebars.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Chocolate Bars</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/ricecrakers.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Rice Crackers</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/pretzels.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-ba sm:text-xsse">Pretzels</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/trailmix.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-bas sm:text-xse">Trail Mix</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/driedfruits.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Dried Fruits</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+                <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
+                    <figure>
+                        <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cheesecrakers.jpg" alt="">
+                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                            <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
+                        </span>
+                    </figure>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs">Cheese Crackers</span>
+                        <div class="text-le sm:text-sm">
+                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-slate-500 line-through">₱500</span>
+                        </div>
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
+                            <span class="text-xs text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
+                        </div>
+                        <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
+                    </figcaption>
+                </article>
+            </main>
         </section>
+
     </main>
+
+    <footer id="contacts">
+        <header class="bg-green-700 grid grid-cols-4 justify-items-center p-7 lg:grid-cols-2 lg:gap-5 sm:grid-cols-1 sm:justify-items-start">
+            <div class="flex gap-3">
+                <i class="fa-solid fa-truck bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium lg:text-base">Free Shippping</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">On selected items</span>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <i class="fa-solid fa-phone-volume bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium lg:text-base">Give Us A Call</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">(+63) 923232323</span>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <i class="fa-solid fa-envelope-open bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium lg:text-base">Email Us</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">sample@gmail.sample</span>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <i class="fa-solid fa-users bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>
+                <div class="flex-col flex">
+                    <span class="text-white text-xl font-medium lg:text-base">Community</span>
+                    <span class="text-slate-300 italic text-base lg:text-sm">Shop with purpose</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="bg-green-900 p-20 sm:p-10 flex gap-10 flex-col">
+            <article class="grid grid-cols-4 justify-items-center md:grid-cols-3 md:justify-items-start md:gap-10 sm:grid-cols-1">
+                <div class="md:col-span-3 sm:col-span-1">
+                    <h1 class="text-white text-xl font-medium mb-3">The Company</h1>
+                    <p class="mb-4 text-slate-400 w-full text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatem modi mollitia iusto aperiam vel accusamus? Voluptas reprehenderit facilis numquam?</p>
+                    <figure class="flex gap-3 sm:flex-col">
+                        <img class="w-40 rounded-xl border-2 bg-slate-800 hover:scale-105 transition" src="../images/googleplay.jpg" alt="">
+                        <img class="w-40 rounded-xl border-2 bg-slate-800 hover:scale-105 transition" src="../images/applestore.jpg" alt="">
+                    </figure>
+                </div>
+    
+                <div>
+                    <h1 class="text-white text-xl font-medium mb-3">Information</h1>
+                    <ul class="italic text-slate-400">
+                        <li>About us</li>
+                        <li>Blog</li>
+                        <li>Check Out</li>
+                        <li>contact</li>
+                        <li>Service</li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h1 class="text-white text-xl font-medium mb-3">Categories</h1>
+                    <ul class="italic text-slate-400">
+                        <li>Fruits and Vegetables</li>
+                        <li>Dairy Products</li>
+                        <li>Package Foods</li>
+                        <li>Beverage</li>
+                        <li>Health and Wellness</li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h1 class="text-white text-xl font-medium mb-3">My Account</h1>
+                    <ul class="italic text-slate-400">
+                        <li>Account</li>
+                        <li>Shipping</li>
+                        <li>Order Status</li>
+                        <li>Shipping Cart</li>
+                        <li>Our Cart</li>
+                    </ul>
+                </div>
+            </article>
+
+            <hr>
+            
+            <article class="grid grid-cols-3 justify-items-center items-center lg:grid-cols-2 lg:gap-10 sm:grid-cols-1">
+                <h1 class="text-white font-medium  md:text-xs text-center">Copyright © 2024 <span class="text-blue-600">SUPHA</span>. All Rights Reserved.</h1>
+                <figure class="flex gap-2">
+                    <img class="w-16 h-10 rounded-lg" src="../images/gcash.png" alt="">
+                    <img class="w-16 h-10 rounded-lg" src="../images/maya.jpg" alt="">
+                    <img class="w-16 h-10 rounded-lg bg-white" src="../images/paypal.png" alt="">
+                </figure>
+                <h1 class="text-white font-medium lg:col-span-2 md:text-xs sm:col-span-1 text-center">Privacy and Cookie Policy |  Terms of Service</h1>
+            </article>
+        </main>
+        
+    </footer>
 
     <script src="../js/ecomms-continuation.js"></script>
 </body>
