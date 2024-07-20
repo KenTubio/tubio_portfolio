@@ -33,10 +33,21 @@
                 </div>
                 <div id="cart" class="bg-white p-3 px-4 rounded-full relative hover:scale-110 transition">
                     <i class="fa-solid fa-shopping-cart"></i>
-                    <span id="cart-numdisplay" class="bg-red-700 text-white absolute px-2 rounded-full top-0">2</span>
+                    <span id="cart-numdisplay" class="bg-red-700 text-white absolute px-2 rounded-full top-0">0</span>
                 </div>
             </div>
+
         </header>
+
+        <!-- CART POP UP TO DITO PART -->
+        <div id="popup-container" class="fixed z-50 bg-[#1b641bc2] flex justify-center items-center left-0 right-0 top-0 bottom-0 backdrop-blur-md hidden p-2">
+            <figure id="popup" class="bg-white rounded-md relative p-4 h-4/6 overflow-y-auto w-2/4">
+                <span id="close" class="font-bold absolute right-2 top-2 hover:scale-125 transition"><i class="fa-solid fa-x"></i></span>
+                <article id="popup-content" class="flex flex-col gap-2">
+                    dawd
+                </article>
+            </figure>
+        </div>
 
         <section class="bg-white shadow-sm pt-[10rem] px-32 lg:px-5">
             <figure class="flex gap-2 h-80 sm:h-40">
@@ -120,8 +131,8 @@
                 <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/mixveges.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
-                            <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer " data-image-src="../images/mixveges.jpg">
+                            <i class="fa-solid fa-cart-shopping  text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
                     </figure>
@@ -147,7 +158,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/apples.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/apples.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -174,7 +185,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/carrots.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/carrots.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -201,7 +212,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lettuce.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/lettuce.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -228,7 +239,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/tomatoes.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/tomatoes.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -255,7 +266,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/oranges.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/oranges.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -282,7 +293,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/potatoes.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/potatoes.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -309,7 +320,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cucomber.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/cucomber.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -336,7 +347,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/spinach.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/spinach.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -363,7 +374,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/bellpepper.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/bellpepper.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -393,7 +404,7 @@
                 <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/steak.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/steak.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -420,7 +431,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chicken.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/chicken.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -447,7 +458,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/pork.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/pork.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -474,7 +485,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/turkey.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/turkey.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -501,7 +512,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lamb.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/lamb.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -528,7 +539,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chocken thigh.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/chocken thigh.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -555,7 +566,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/sausage.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/sausage.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -582,7 +593,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/tenderloin.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/tenderloin.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -609,7 +620,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/bacon.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/bacon.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -636,7 +647,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/duck.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/duck.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -666,7 +677,7 @@
                 <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/salmon.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/salmon.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -693,7 +704,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/shrimp.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/shrimp.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -720,7 +731,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/King Crab.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/King Crab.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -748,7 +759,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cod 👍.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/cod 👍.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -775,7 +786,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/mahi.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/mahi.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -802,7 +813,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/Tuna-Terrific.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/Tuna-Terrific.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -829,7 +840,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/scallops.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/scallops.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -856,7 +867,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/seabass.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/seabass.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -883,7 +894,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lobster.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/lobster.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -910,7 +921,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/trout.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/trout.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -940,7 +951,7 @@
                 <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chedder.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/chedder.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -967,7 +978,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/parmessan.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/parmessan.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -994,18 +1005,18 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/Organic Whole Milk.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/Organic Whole Milk.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
                     </figure>
-                    <figcaption class="flex f sm:text-xslex-col gap-3 p-2">
-                        <span class="text-base">Organe sm:text-smc Whole Milk</span>
+                    <figcaption class="flex flex-col sm:text-xslex-col gap-3 p-2">
+                        <span class="text-base sm:text-sm">Organic Whole Milk</span>
                         <div class="text-base">
                             <span class="text-red-500">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
-                        <div  sm:flex-col sm:items-startclass="flex gap-2 items-center">
+                        <div class="flex gap-2 items-center sm:flex-col sm:items-start">
                             <span class="text-xs text-yellow-500">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1013,7 +1024,7 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </span>
-                   sm:text-xs          <span class="text-sm">2.9k sold</span>
+                            <span class="text-sm  sm:text-xs">2.9k sold</span>
                         </div>
                         <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
                     </figcaption>
@@ -1021,7 +1032,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/yogurt.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/yogurt.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1048,7 +1059,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/eggs.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/eggs.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1075,7 +1086,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/butter.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/butter.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1102,7 +1113,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/kefir.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/kefir.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1129,7 +1140,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/sourcream.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/sourcream.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1156,7 +1167,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cottagecheese.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/cottagecheese.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1183,7 +1194,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/creamcheese.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/creamcheese.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1213,7 +1224,7 @@
                 <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/coldbrew.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/coldbrew.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1240,7 +1251,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/greentea.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/greentea.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1267,7 +1278,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/orangejuice.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/orangejuice.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1294,7 +1305,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/sparklingwater.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/sparklingwater.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1321,7 +1332,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/coconutwater.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/coconutwater.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1348,7 +1359,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/Coca-Cola.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/Coca-cola.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1375,7 +1386,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chocomilk.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/chocomilk.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1402,7 +1413,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/lemonade.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/lemonade.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1429,7 +1440,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/energydrink.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/energydrink.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1456,7 +1467,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/icetea.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/icetea.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1486,7 +1497,7 @@
                 <article  class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/potatochips.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/potatochips.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1513,7 +1524,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/popcorn.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/popcorn.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1540,7 +1551,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/granolabars.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/granolabars.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1567,7 +1578,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/mixednuts.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/mixednuts.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1594,7 +1605,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/chocolatebars.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/chocolatebars.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1621,7 +1632,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/ricecrakers.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/ricecrakers.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1648,7 +1659,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/pretzels.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/pretzels.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1675,7 +1686,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/trailmix.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/trailmix.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1702,7 +1713,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/driedfruits.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/driedfruits.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
@@ -1729,7 +1740,7 @@
                 <article class="bg-white rounded-sm shadow-sm hover:shadow-xl transition hover:scale-[1.03] relative">
                     <figure>
                         <img class="h-60 sm:h-36 sm:object-center object-cover w-full" src="../images/cheesecrakers.jpg" alt="">
-                        <span id="add-to-cart" class="absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer">
+                        <span id="add-to-cart" class="bg-red-600 absolute bottom-1 right-1 hover:scale-110 transition hover:cursor-pointer" data-image-src="../images/cheesecrakers.jpg">
                             <i class="fa-solid fa-cart-shopping bg-red-600 text-white text-xl p-3 rounded-sm relative"></i>
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
