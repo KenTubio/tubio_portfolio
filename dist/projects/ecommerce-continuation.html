@@ -41,10 +41,15 @@
 
         <!-- CART POP UP TO DITO PART -->
         <div id="popup-container" class="fixed z-50 bg-[#1b641bc2] flex justify-center items-center left-0 right-0 top-0 bottom-0 backdrop-blur-md hidden p-2">
-            <figure id="popup" class="bg-white rounded-md relative p-4 h-4/6 overflow-y-auto w-2/4">
-                <span id="close" class="font-bold absolute right-2 top-2 hover:scale-125 transition"><i class="fa-solid fa-x"></i></span>
+            <figure id="popup" class="bg-white rounded-md relative h-4/6 overflow-y-auto w-2/5 relative xl:w-2/4 lg:w-3/5 md:w-4/5 sm:w-full">
                 <article id="popup-content" class="flex flex-col gap-2">
-                    dawd
+                    <header class="flex shadow-md justify-between items-center px-5 sticky top-0 z-20 bg-green-200">
+                        <div class="flex gap-3">
+                            <span id="close" class="font-bold hover:scale-125 transition text-2xl"><i class="fa-solid fa-arrow-left"></i></span>
+                            <h1 class="text-2xl font-rubik sm:text-base">Shopping Cart</h1>
+                        </div>
+                        <img class="w-36" src="../images/logo-ecommerce.png" alt="">
+                    </header>
                 </article>
             </figure>
         </div>
@@ -137,9 +142,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Basket of Mix Vegetables</span>
+                        <span class="text-base sm:text-xs item-name">Basket of Mix Vegetables</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -164,9 +169,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Juicy Red Apples</span>
+                        <span class="text-base sm:text-xs item-name">Juicy Red Apples</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -191,9 +196,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Crunchy Baby Carrots</span>
+                        <span class="text-base sm:text-xs item-name">Crunchy Baby Carrots</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -218,9 +223,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Crisp Romaine Lettuce</span>
+                        <span class="text-base sm:text-xs item-name">Crisp Romaine Lettuce</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -245,9 +250,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Vine-Ripened Tomatoes</span>
+                        <span class="text-base sm:text-xs item-name">Vine-Ripened Tomatoes</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -272,9 +277,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Sweet Navel Oranges</span>
+                        <span class="text-base sm:text-xs item-name">Sweet Navel Oranges</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -299,9 +304,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Russet Baking Potatoes</span>
+                        <span class="text-base sm:text-xs item-name">Russet Baking Potatoes</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -326,9 +331,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Fresh Sliced Cucumbers</span>
+                        <span class="text-base sm:text-xs item-name">Fresh Sliced Cucumbers</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -353,9 +358,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Organic Baby Spinach</span>
+                        <span class="text-base sm:text-xs item-name">Organic Baby Spinach</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -380,9 +385,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Colorful Bell Peppers</span>
+                        <span class="text-base sm:text-xs item-name">Colorful Bell Peppers</span>
                         <div class="text-le sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -410,9 +415,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Grass-Fed Beef Steaks</span>
+                        <span class="text-base sm:text-xs item-name">Grass-Fed Beef Steaks</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -437,9 +442,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Free-Range Chicken Breasts</span>
+                        <span class="text-base sm:text-xs item-name">Free-Range Chicken Breasts</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -464,9 +469,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Juicy Pork Chops</span>
+                        <span class="text-base sm:text-xs item-name">Juicy Pork Chops</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -491,9 +496,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Lean Ground Turkey</span>
+                        <span class="text-base sm:text-xs item-name">Lean Ground Turkey</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -518,9 +523,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Tender Lamb Chops</span>
+                        <span class="text-base sm:text-xs item-name">Tender Lamb Chops</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -545,9 +550,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Organic Chicken Thighs</span>
+                        <span class="text-base sm:text-xs item-name">Organic Chicken Thighs</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -572,9 +577,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Beef Sausages</span>
+                        <span class="text-base sm:text-xs item-name">Beef Sausages</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -599,9 +604,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Boneless Pork Tenderloin</span>
+                        <span class="text-base sm:text-xs item-name">Boneless Pork Tenderloin</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -626,9 +631,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Thick-Cut Bacon</span>
+                        <span class="text-base sm:text-xs item-name">Thick-Cut Bacon</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -653,9 +658,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Duck Breasts</span>
+                        <span class="text-base sm:text-xs item-name">Duck Breasts</span>
                         <div class="text-le sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -683,9 +688,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Wild-Caught Salmon Fillets</span>
+                        <span class="text-base sm:text-xs item-name">Wild-Caught Salmon Fillets</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -710,9 +715,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Fresh Shrimp</span>
+                        <span class="text-base sm:text-xs item-name">Fresh Shrimp</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -737,10 +742,10 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Alaskan King Crab Legs
+                        <span class="text-base sm:text-xs item-name">Alaskan King Crab Legs
                         </span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -765,9 +770,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Atlantic Cod Fillets</span>
+                        <span class="text-base sm:text-xs item-name">Atlantic Cod Fillets</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -792,9 +797,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Mahi-Mahi Steaks</span>
+                        <span class="text-base sm:text-xs item-name">Mahi-Mahi Steaks</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -819,9 +824,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Ahi Tuna Steaks</span>
+                        <span class="text-base sm:text-xs item-name">Ahi Tuna Steaks</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -846,9 +851,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Fresh Sea Scallops</span>
+                        <span class="text-base sm:text-xs item-name">Fresh Sea Scallops</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -873,9 +878,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Chilean Sea Bass</span>
+                        <span class="text-base sm:text-xs item-name">Chilean Sea Bass</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -900,9 +905,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Lobster Tails</span>
+                        <span class="text-base sm:text-xs item-name">Lobster Tails</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -927,9 +932,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Rainbow Trout Fillets</span>
+                        <span class="text-base sm:text-xs item-name">Rainbow Trout Fillets</span>
                         <div class="text-le sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -957,9 +962,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Cheddar Cheese Blocks</span>
+                        <span class="text-base sm:text-xs item-name">Cheddar Cheese Blocks</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -984,9 +989,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Parmesan Cheese</span>
+                        <span class="text-base sm:text-xs item-name">Parmesan Cheese</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1013,7 +1018,7 @@
                     <figcaption class="flex flex-col sm:text-xslex-col gap-3 p-2">
                         <span class="text-base sm:text-sm">Organic Whole Milk</span>
                         <div class="text-base">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1038,9 +1043,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Greek Yogurt Cups</span>
+                        <span class="text-base sm:text-xs item-name">Greek Yogurt Cups</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1065,9 +1070,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Cage-Free Eggs</span>
+                        <span class="text-base sm:text-xs item-name">Cage-Free Eggs</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1092,9 +1097,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Butter Sticks</span>
+                        <span class="text-base sm:text-xs item-name">Butter Sticks</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1119,9 +1124,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Probiotic Kefir</span>
+                        <span class="text-base sm:text-xs item-name">Probiotic Kefir</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1146,9 +1151,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Sour Cream Tubs</span>
+                        <span class="text-base sm:text-xs item-name">Sour Cream Tubs</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1173,9 +1178,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Fresh Cottage Cheese</span>
+                        <span class="text-base sm:text-xs item-name">Fresh Cottage Cheese</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1200,9 +1205,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Cream Cheese Spread</span>
+                        <span class="text-base sm:text-xs item-name">Cream Cheese Spread</span>
                         <div class="text-le sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1230,9 +1235,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Cold Brew Coffee</span>
+                        <span class="text-base sm:text-xs item-name">Cold Brew Coffee</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1257,9 +1262,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Green Tea Bags</span>
+                        <span class="text-base sm:text-xs item-name">Green Tea Bags</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1284,9 +1289,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Orange Juice</span>
+                        <span class="text-base sm:text-xs item-name">Orange Juice</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1310,10 +1315,10 @@
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
                     </figure>
-                    <figcaption class="flex f sm:text-xs flex-col gap-3 p-2">
-                        <span class="text-base sm:text-sm">Sparkling Water</span>
-                        <div class="text-base sm:text-xs">
-                            <span class="text-red-500">₱169.49</span>
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs item-name">Sparkling Water</span>
+                        <div class="text-base sm:text-sm">
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1324,7 +1329,7 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </span>
-                            <span class="text-sm sm:text-xs ">2.9k sold</span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
                         </div>
                         <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
                     </figcaption>
@@ -1338,9 +1343,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Coconut Water</span>
+                        <span class="text-base sm:text-xs item-name">Coconut Water</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1365,9 +1370,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-bas sm:text-xse">Coca-cola</span>
+                        <span class="text-bas sm:text-xse item-name">Coca-cola</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1392,9 +1397,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Chocolate Milk</span>
+                        <span class="text-base sm:text-xs item-name">Chocolate Milk</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1419,9 +1424,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-ba sm:text-xsse">Lemonade</span>
+                        <span class="text-ba sm:text-xsse item-name">Lemonade</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1446,9 +1451,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Energy Drink</span>
+                        <span class="text-base sm:text-xs item-name">Energy Drink</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1473,9 +1478,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-ba sm:text-xsse">Iced Tea</span>
+                        <span class="text-ba sm:text-xsse item-name">Iced Tea</span>
                         <div class="text-le sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1503,9 +1508,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Potato Chips</span>
+                        <span class="text-base sm:text-xs item-name">Potato Chips</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1530,9 +1535,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-b sm:text-xsase">Popcorn</span>
+                        <span class="text-b sm:text-xsase item-name">Popcorn</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1557,9 +1562,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Granola Bars</span>
+                        <span class="text-base sm:text-xs item-name">Granola Bars</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1584,9 +1589,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Mixed Nuts</span>
+                        <span class="text-base sm:text-xs item-name">Mixed Nuts</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1611,9 +1616,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Chocolate Bars</span>
+                        <span class="text-base sm:text-xs item-name">Chocolate Bars</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1638,9 +1643,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Rice Crackers</span>
+                        <span class="text-base sm:text-xs item-name">Rice Crackers</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1665,9 +1670,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-ba sm:text-xsse">Pretzels</span>
+                        <span class="text-ba sm:text-xsse item-name">Pretzels</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1692,9 +1697,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-bas sm:text-xse">Trail Mix</span>
+                        <span class="text-bas sm:text-xse item-name">Trail Mix</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1719,9 +1724,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Dried Fruits</span>
+                        <span class="text-base sm:text-xs item-name">Dried Fruits</span>
                         <div class="text-base sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
@@ -1746,9 +1751,9 @@
                         </span>
                     </figure>
                     <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
-                        <span class="text-base sm:text-xs">Cheese Crackers</span>
+                        <span class="text-base sm:text-xs item-name">Cheese Crackers</span>
                         <div class="text-le sm:text-sm">
-                            <span class="text-red-500">₱169.49</span>
+                            <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
                         <div class="flex gap-2 items-center sm:flex-col sm:items-start">
