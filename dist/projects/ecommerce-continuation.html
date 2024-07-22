@@ -41,7 +41,7 @@
 
         <!-- CART POP UP TO DITO PART -->
         <div id="popup-container" class="fixed z-50 bg-[#1b641bc2] flex justify-center items-center left-0 right-0 top-0 bottom-0 backdrop-blur-md hidden p-2">
-            <figure id="popup" class="bg-white rounded-md relative h-4/6 overflow-y-auto w-2/5 relative xl:w-2/4 lg:w-3/5 md:w-4/5 sm:w-full">
+            <figure id="popup" class="bg-white rounded-md h-4/6 overflow-y-auto w-2/5 relative xl:w-2/4 lg:w-3/5 md:w-4/5 sm:w-full">
                 <article id="popup-content" class="flex flex-col gap-2">
                     <header class="flex shadow-md justify-between items-center px-5 sticky top-0 z-20 bg-green-200">
                         <div class="flex gap-3">
@@ -51,6 +51,10 @@
                         <img class="w-36" src="../images/logo-ecommerce.png" alt="">
                     </header>
                 </article>
+                <div class="backdrop-blur-md sticky bottom-0 flex justify-center h-20 gap-2">
+                    <button id="checkout" class=" bg-blue-400 text-white px-7 my-2 rounded-md hover:scale-105 transition">Checkout</button>
+                    <button id="checkoutall" class=" bg-orange-400 text-white px-7 my-2 rounded-md hover:scale-105 transition">Checkout (All) ?</button>
+                </div>
             </figure>
         </div>
 
@@ -74,20 +78,6 @@
             </figure>
             
             <nav class="p-3 sm:px-0">
-                <div class="sm:text-2xl text-4xl pt-3 pb-5 font-mono font-bold flex justify-center gap-2 text-green-700">
-                    <span class="animate-bounce [animation-delay:0ms]">C</span>
-                    <span class="animate-bounce [animation-delay:50ms]">A</span>
-                    <span class="animate-bounce [animation-delay:100ms]">T</span>
-                    <span class="animate-bounce [animation-delay:150ms]">E</span>
-                    <span class="animate-bounce [animation-delay:200ms]">G</span>
-                    <span class="animate-bounce [animation-delay:250ms]">O</span>
-                    <span class="animate-bounce [animation-delay:300ms]">R</span>
-                    <span class="animate-bounce [animation-delay:350ms]">I</span>
-                    <span class="animate-bounce [animation-delay:400ms]">E</span>
-                    <span class="animate-bounce [animation-delay:450ms]">S</span>
-                    <span class="animate-bounce [animation-delay:500ms]">!</span>
-
-                </div>
                 <ul class="grid grid-cols-6 lg:grid-cols-3 sm:gap-5 text-center">
                     <li class="hover:border-2 hover:rounded-md">
                         <a class="flex flex-col items-center" href="#vege-section">
@@ -1015,9 +1005,9 @@
                             <span class="absolute -right-1 -top-2"><i class="fa-solid fa-plus bg-green-500 text-white p-1 rounded-full text-sm border-2 border-white"></i></span>
                         </span>
                     </figure>
-                    <figcaption class="flex flex-col sm:text-xslex-col gap-3 p-2">
-                        <span class="text-base sm:text-sm">Organic Whole Milk</span>
-                        <div class="text-base">
+                    <figcaption class="flex flex-col gap-3 xs:gap-1 p-2">
+                        <span class="text-base sm:text-xs item-name">Organic Whole Milk</span>
+                        <div class="text-base sm:text-sm">
                             <span class="text-red-500 item-price">₱169.49</span>
                             <span class="text-slate-500 line-through">₱500</span>
                         </div>
@@ -1029,7 +1019,7 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </span>
-                            <span class="text-sm  sm:text-xs">2.9k sold</span>
+                            <span class="text-sm sm:text-xs">2.9k sold</span>
                         </div>
                         <span class="text-slate-500 text-xs sm:text-[.6rem]">Manila, Philippines</span>
                     </figcaption>

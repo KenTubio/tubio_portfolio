@@ -43,13 +43,45 @@ closeBtn.addEventListener("click", () => {
 
 
 
+
 //ADD TO CART ITEMS TO DITO BANDA
 document.querySelectorAll('#add-to-cart').forEach(button => {
   button.addEventListener('click', ()=>{
+
     //eto yung container nilang lahat
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('shadow-md', 'flex', 'px-2', 'relative');
     popupContent.appendChild(itemContainer);
+    
+    
+
+    //checkbox to dito
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.classList.add('mr-2', 'w-4', 'border-2', 'check');
+
+
+    function checkoutBtnUpdate(){
+      itemContainer.classList.add('hidden');
+      button.style.pointerEvents = 'auto';
+      button.style.opacity = '1'; 
+    }
+    
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        checkoutBtn.addEventListener('click', ()=>{
+          checkoutBtnUpdate();
+          minusCountPerClick();
+        });
+        
+
+      } else {
+        checkoutBtn.removeEventListener('click', checkoutBtnUpdate);
+        checkoutBtn.removeEventListener('click', minusCountPerClick);
+      }
+    });
+    itemContainer.appendChild(checkbox);
 
     //eto yung img na papasok sa loob ng cart pag na click
     const imgDisplay = button.getAttribute('data-image-src');
@@ -73,13 +105,56 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
     itemNameContainer.textContent = itemName;
     itemDetailsContainer.appendChild(itemNameContainer);
 
-    const priceContainer = document.createElement('span');
-    priceContainer.classList.add('text-red-500', 'text-xl', 'font-bold', 'sm:text-base');
-    priceContainer.textContent = itemPrice;
-    itemDetailsContainer.appendChild(priceContainer);
 
+    //dito yung price at yung quantity area
+    const containerPriceQuantity = document.createElement('div');
+    containerPriceQuantity.classList.add('flex', 'gap-4');
+    itemDetailsContainer.appendChild(containerPriceQuantity);
+
+    const quantity = document.createElement('div');
+    quantity.classList.add('order-2', 'flex', 'gap-2', 'items-center', 'border-2', 'rounded-md', 'px-1', 'absolute', 'bottom-2', 'right-2');
+    containerPriceQuantity.appendChild(quantity);
+
+    const minusBtn = document.createElement('i');
+    minusBtn.classList.add('fa-solid', 'fa-minus', 'bg-slate-300', 'px-2', 'py-1', 'rounded-sm','hover:scale-105', 'transition','minus-btn');
+
+    const quantityDisplay = document.createElement('span');
+    quantityDisplay.innerText = '1';
+    quantityDisplay.classList.add('quantity-display');
+
+    const plusBtn = document.createElement('i');
+    plusBtn.classList.add('fa-solid', 'fa-plus', 'bg-slate-300', 'px-2', 'py-1', 'rounded-sm','hover:scale-105', 'transition', 'plus-btn');
+
+    //plus and minus btn functions
+    let quantityNumber = parseInt(quantityDisplay.innerText, 10);
+    plusBtn.addEventListener('click', ()=>{
+      quantityNumber ++;
+
+      quantityDisplay.textContent = quantityNumber;
+    })
+
+    minusBtn.addEventListener('click', ()=>{
+      if(quantityNumber > 1){
+        quantityNumber --; 
+
+        quantityDisplay.textContent = quantityNumber;
+      }
+    })
+
+
+    quantity.appendChild(minusBtn);
+    quantity.appendChild(quantityDisplay);
+    quantity.appendChild(plusBtn);
+    
+    const priceContainer = document.createElement('span');
+    priceContainer.classList.add('text-red-500', 'text-xl', 'font-bold', 'sm:text-base', 'order-1');
+    priceContainer.textContent = itemPrice;
+    containerPriceQuantity.appendChild(priceContainer);
+
+
+    //free shipping details to dito
     const freeShppingDetails = document.createElement('span');
-    freeShppingDetails.classList.add('text-sm', 'sm:text-xs', 'sm:w-3/5');
+    freeShppingDetails.classList.add('text-sm', 'sm:text-[.6rem]', 'sm:w-3/5');
     freeShppingDetails.innerHTML = '<i class="fa-solid fa-truck-fast text-green-700"></i> Enjoy low to free shipping!';
     itemDetailsContainer.appendChild(freeShppingDetails);
 
@@ -89,21 +164,22 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
     deleteItem.innerHTML = '<i class="fa-solid fa-trash-can absolute top-2 right-2 text-green-600 hover:scale-125 transition text-xl sm:text-base"></i>';
     itemDetailsContainer.appendChild(deleteItem);
 
-
-    // checkout button function
-    const checkoutBtn = document.createElement('button');
-    checkoutBtn.classList.add('hover:scale-110', 'absolute', 'bottom-2', 'right-2', 'bg-blue-400', 'p-2', 'text-white', 'text-sm', 'rounded-md', 'transition', 'sm:text-[.7rem]');
-    checkoutBtn.innerHTML = 'Checkout';
-    itemDetailsContainer.appendChild(checkoutBtn);
-
-
     deleteItem.addEventListener('click', ()=>{
       itemContainer.classList.add('hidden');
       button.style.pointerEvents = 'auto';
       button.style.opacity = '1';  
     })
 
-
+    const checkoutBtn = document.getElementById('checkout');
+    const checkoutAllBtn = document.getElementById('checkoutall');
+   
+    checkoutAllBtn.addEventListener('click', ()=>{
+      itemContainer.classList.add('hidden');
+      button.style.pointerEvents = 'auto';
+      button.style.opacity = '1';  
+      countDisplay = 0;
+      cartNumDisplay.textContent = countDisplay;
+    })
 
     button.style.pointerEvents = 'none';
     button.style.opacity = '.3';
@@ -119,12 +195,19 @@ let countDisplay = parseInt(cartNumDisplay.textContent, 10);
 
 function countPerClick() {
   countDisplay ++;
-
   cartNumDisplay.textContent = countDisplay;
 }
 
-const allCartBtn = document.querySelectorAll('#add-to-cart');
+function minusCountPerClick() {
+  if(countDisplay > 0){
+    countDisplay --;
+    cartNumDisplay.textContent = countDisplay;
+  }
+}
 
 document.querySelectorAll('#add-to-cart').forEach(button =>{
   button.addEventListener('click', countPerClick);
 })
+
+
+
