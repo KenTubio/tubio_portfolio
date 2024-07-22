@@ -74,8 +74,6 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
           checkoutBtnUpdate();
           minusCountPerClick();
         });
-        
-
       } else {
         checkoutBtn.removeEventListener('click', checkoutBtnUpdate);
         checkoutBtn.removeEventListener('click', minusCountPerClick);
@@ -165,6 +163,7 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
     itemDetailsContainer.appendChild(deleteItem);
 
     deleteItem.addEventListener('click', ()=>{
+      minusCountPerClick();
       itemContainer.classList.add('hidden');
       button.style.pointerEvents = 'auto';
       button.style.opacity = '1';  
