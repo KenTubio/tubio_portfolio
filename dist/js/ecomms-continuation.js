@@ -70,10 +70,8 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
 
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
-        checkoutBtn.addEventListener('click', ()=>{
-          checkoutBtnUpdate();
-          minusCountPerClick();
-        });
+        checkoutBtn.addEventListener('click', checkoutBtnUpdate);
+        checkoutBtn.addEventListener('click', minusCountPerClick);
       } else {
         checkoutBtn.removeEventListener('click', checkoutBtnUpdate);
         checkoutBtn.removeEventListener('click', minusCountPerClick);
