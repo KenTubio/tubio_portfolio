@@ -50,7 +50,7 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
 
     //eto yung container nilang lahat
     const itemContainer = document.createElement('div');
-    itemContainer.classList.add('shadow-md', 'flex', 'px-2', 'relative');
+    itemContainer.classList.add('shadow-md', 'flex', 'px-2', 'relative', 'itemBox');
     popupContent.appendChild(itemContainer);
     
     
@@ -66,17 +66,29 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
       button.style.pointerEvents = 'auto';
       button.style.opacity = '1'; 
     }
+
+    function updateCartDisplay() {
+      const checkboxes = popupContent.querySelectorAll('.check');
+     
+      countDisplay = (popupContent.querySelectorAll('.itemBox').length - Array.from(checkboxes).filter(checkbox => checkbox.checked).length);
+    
+      cartNumDisplay.textContent = countDisplay;
+    }
     
 
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
         checkoutBtn.addEventListener('click', checkoutBtnUpdate);
         checkoutBtn.addEventListener('click', minusCountPerClick);
+        checkoutBtn.addEventListener('click', updateCartDisplay);
+       
       } else {
         checkoutBtn.removeEventListener('click', checkoutBtnUpdate);
         checkoutBtn.removeEventListener('click', minusCountPerClick);
       }
     });
+
+    
     itemContainer.appendChild(checkbox);
 
     //eto yung img na papasok sa loob ng cart pag na click
@@ -169,6 +181,7 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
 
     const checkoutBtn = document.getElementById('checkout');
     const checkoutAllBtn = document.getElementById('checkoutall');
+    
    
     checkoutAllBtn.addEventListener('click', ()=>{
       itemContainer.classList.add('hidden');
@@ -190,6 +203,7 @@ const cartNumDisplay = document.getElementById('cart-numdisplay');
 
 let countDisplay = parseInt(cartNumDisplay.textContent, 10);
 
+
 function countPerClick() {
   countDisplay ++;
   cartNumDisplay.textContent = countDisplay;
@@ -205,6 +219,3 @@ function minusCountPerClick() {
 document.querySelectorAll('#add-to-cart').forEach(button =>{
   button.addEventListener('click', countPerClick);
 })
-
-
-
