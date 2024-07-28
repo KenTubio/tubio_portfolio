@@ -52,8 +52,8 @@
                     </header>
                 </article>
                 <div class="backdrop-blur-md sticky bottom-0 flex justify-center h-20 gap-2">
-                    <button id="checkout" class=" bg-blue-400 text-white px-7 my-2 rounded-md hover:scale-105 transition">Checkout</button>
-                    <button id="checkoutall" class=" bg-orange-400 text-white px-7 my-2 rounded-md hover:scale-105 transition">Checkout (All) ?</button>
+                    <button id="checkout" class="z-40 bg-blue-400 text-white px-7 my-2 rounded-md hover:scale-105 transition">Checkout</button>
+                    <button id="checkoutall" class=" z-50 bg-orange-400 text-white px-7 my-2 rounded-md hover:scale-105 transition">Checkout (All) ?</button>
                 </div>
             </figure>
         </div>
@@ -1763,14 +1763,90 @@
         </section>
 
 
-        <!-- DITO YUNG POPUP SA DELIVERY DETAILS
-        <article id="popup-delivery" class="fixed top-1/2 right-1/2 bg-slate-300">
-            dwddawdadadwd
-        </article> -->
+        <!-- DITO YUNG POPUP SA DELIVERY DETAILS -->
+        <article id="popup-delivery" class=" hidden w-3/5 z-50 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-200 p-10">
+            <span id="closeBtn" class="text-3xl hover:scale-110 transition cursor-pointer absolute right-6 top-6"><i class="fa-solid fa-close"></i></span>
+            <h1 class="font-bold text-3xl mb-7">Shipping Details</h1>
 
+            <form class="">
+                <article class="grid grid-cols-2 gap-4">
+                    <input class="p-3 rounded-md" type="text" placeholder="Company Name (Optional)">
+                    <input class="p-3 rounded-md" type="text" placeholder="Name">
+                    <input class="p-3 rounded-md" type="number" placeholder="Postal Code">
+                    <input class="p-3 rounded-md" type="text" placeholder="Phone Number">
+                    <div class="w-full">
+                        <select class="p-3 w-full rounded-md" name="city" id="city">
+                            <option value="">City:</option>
+                            <option value="">Manila</option>
+                            <option value="">Quezon City</option>
+                            <option value="">Makati</option>
+                            <option value="">Taguig</option>
+                            <option value="">Cebu City</option>
+                            <option value="">Davao City</option>
+                            <option value="">Baguio</option>
+                            <option value="">Iloilo City</option>
+                            <option value="">Bacolod</option>
+                            <option value="">Cagayan de Oro</option>
+                            <option value="">Zamboanga City</option>
+                            <option value="">General Santos City</option>
+                            <option value="">Pasig</option>
+                            <option value="">Muntinlupa</option>
+                            <option value="">Caloocan</option>
+                            <option value="">Marikina</option>
+                            <option value="">Pasay</option>
+                            <option value="">Mandaluyong</option>
+                            <option value="">Las Piñas</option>
+                            <option value="">San Juan</option>
+                        </select>
+                    </div>
+
+                    <div >
+                        <select class="p-3 rounded-md w-full" name="district" id="district">
+                            <option value="">District: </option>
+                            <option value="">Binondo (Manila)</option>
+                            <option value="">Tondo (Manila)</option>
+                            <option value="">Sampaloc (Manila)</option>
+                            <option value="">Diliman (Quezon City)</option>
+                            <option value="">Cubao (Quezon City)</option>
+                            <option value="">Novaliches (Quezon City)</option>
+                            <option value="">Bel-Air (Makati)</option>
+                            <option value="">Poblacion (Makati)</option>
+                            <option value="">Bonifacio Global City (Taguig)</option>
+                            <option value="">Taguig Proper (Taguig)</option>
+                            <option value="">Lahug (Cebu City)</option>
+                            <option value="">Mabolo (Cebu City)</option>
+                            <option value="">Poblacion (Davao City)</option>
+                            <option value="">Agdao (Davao City)</option>
+                            <option value="">Burnham Park (Baguio)</option>
+                            <option value="">Lourdes Subdivision (Baguio)</option>
+                            <option value="">Jaro (Iloilo City)</option>
+                            <option value="">Mandurriao (Iloilo City)</option>
+                            <option value="">Barangay Taculing (Bacolod)</option>
+                            <option value="">Barangay Singcang-Airport (Bacolod)</option>
+                        </select>
+                    </div>
+                </article>
+                <textarea class="w-full resize-none mt-3 rounded-md h-28 p-3" name="" id="" placeholder="Address (Area and Street)"></textarea>
+
+                <select class="p-3 w-full rounded-md mt-2" name="" id="">
+                    <option value="">Payment Method: </option>
+                    <optgroup label="Cash">
+                        <option value="">Cash on Delivery</option>
+                    </optgroup>
+                    <optgroup label="Online Payment">
+                        <option value="">Gcash</option>
+                        <option value="">Maya</option>
+                        <option value="">Paypal</option>
+                    </optgroup>
+                </select>
+            </form>
+
+            <button id="deliveryBtn" class="w-full rounded-md bg-green-500 text-white mt-3 py-3 text-xl">Deliver here</button>
+        </article>
+ 
     </main>
 
-    <footer id="contacts">
+    <footer id="contacts" class="pt-10">
         <header class="bg-green-700 grid grid-cols-4 justify-items-center p-7 lg:grid-cols-2 lg:gap-5 sm:grid-cols-1 sm:justify-items-start">
             <div class="flex gap-3">
                 <i class="fa-solid fa-truck bg-green-300 text-4xl p-3 rounded-full lg:text-2xl"></i>

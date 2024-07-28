@@ -179,17 +179,37 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
       button.style.opacity = '1';  
     })
 
+    //delivery details popup
     const checkoutBtn = document.getElementById('checkout');
     const checkoutAllBtn = document.getElementById('checkoutall');
-    
+    const deliveryPopUp = document.querySelector('#popup-delivery');
+    const closeButton = document.querySelector('#closeBtn');
+    const deliveryBtn = document.querySelector('#deliveryBtn');
+
    
-    checkoutAllBtn.addEventListener('click', ()=>{
+    deliveryBtn.addEventListener('click', ()=>{
       itemContainer.classList.add('hidden');
       button.style.pointerEvents = 'auto';
-      button.style.opacity = '1';  
+      button.style.opacity = '1';   
       countDisplay = 0;
       cartNumDisplay.textContent = countDisplay;
-    })
+      
+      const thankYouMessage = document.createElement('div');
+      thankYouMessage.classList.add('rounded-md', 'p-3', 'text-3xl', 'bg-green-500', 'text-white', 'absolute', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2');
+      deliveryPopUp.appendChild(thankYouMessage);
+
+      const message = document.createElement('p');
+      message.innerText = 'Thanks for Buying!';
+      thankYouMessage.appendChild(message);
+    })  
+
+    checkoutAllBtn.addEventListener('click', () => {
+      deliveryPopUp.classList.toggle('hidden');
+    });
+
+    closeButton.addEventListener('click', ()=>{
+      deliveryPopUp.classList.toggle('hidden');
+    }) 
 
     button.style.pointerEvents = 'none';
     button.style.opacity = '.3';
@@ -219,3 +239,4 @@ function minusCountPerClick() {
 document.querySelectorAll('#add-to-cart').forEach(button =>{
   button.addEventListener('click', countPerClick);
 })
+

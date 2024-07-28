@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="output.css" />
-
+    
     <link rel="shortcut icon" href="../dist/images/me.rounded.png" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
+    <style>
+      .scrolleffect{
+        animation: scrolleffect ease-in-out;
+        animation-timeline: view();
+        animation-range: entry cover 40%;
+
+      }
+      @keyframes scrolleffect {
+        from{
+          opacity: 0;
+          scale: .5;
+        }
+
+        to{ 
+          opacity: 1;
+          scale: 1;
+        }
+      }
+    </style>
   </head>
 
   <body class="font-mono">
@@ -69,7 +89,7 @@
 
     <section id="about" class="h-screen w-full px-14 flex lg:px-7 bg-slate-300">
         <div class="flex items-center sm:flex-col">
-          <div class="w-2/4 flex flex-col  sm:w-full sm:h-screen sm:justify-center">
+          <div class="w-2/4 flex flex-col  sm:w-full sm:h-screen sm:justify-center scrolleffect transition">
             <div class="flex flex-col gap-8 lg:gap-6">
               <div class="gap-2 flex relative before:content-[''] before:h-full before:w-3 before:rounded-sm before:absolute before:bg-emerald-600 text-6xl lg:text-4xl sm:text-2xl font-bold text-slate-800">
                 <h1 class="ml-8 animate-bounce delay0">A</h1>
@@ -90,7 +110,7 @@
             </div>
           </div>
   
-          <div class="w-2/4 flex justify-end items-center sm:justify-center sm:w-full sm:mb-7">
+          <div class="w-2/4 flex justify-end items-center sm:justify-center sm:w-full sm:mb-7 scrolleffect transition">
             <img class="rounded-full w-[30rem] " src="../dist/images/me.jpg" alt="">
           </div>
         </div>
@@ -139,7 +159,7 @@
       </div>
 
       <div class="grid grid-cols-3 gap-x-14 gap-y-10 pt-10 lg:grid-cols-2 md:grid-cols-1">
-        <div class="relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
+        <div class="scrolleffect relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
           <img class="w-full h-64 rounded-lg" src="../dist/images/main-portal.png" alt="">
 
           <h1 class="text-center font-bold underline underline-offset-4 text-2xl">Landing Page</h1>
@@ -150,7 +170,7 @@
             <a href="../dist/projects/landing-page.html" class="bg-slate-700 text-white md:w-full w-3/5 text-center py-3 mt-4 rounded-lg hover:scale-105 transition " target="_blank">View more</a>
           </div>
         </div>
-        <div class="relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
+        <div class="scrolleffect relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
           <img class="w-full h-64 rounded-lg" src="../dist/images/loginform.png" alt="">
 
           <h1 class="text-center font-bold underline underline-offset-4 text-2xl">Simple Login Form</h1>
@@ -161,7 +181,7 @@
             <a href="../dist/projects/login-page.html" class="bg-slate-700 text-white md:w-full w-3/5 text-center py-3 mt-4 rounded-lg hover:scale-105 transition " target="_blank">View more</a>
           </div>
         </div>
-        <div class="relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
+        <div class="scrolleffect relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
           <img class="w-full h-64 rounded-lg" src="../dist/images/calcu.png" alt="">
 
           <h1 class="text-center font-bold underline underline-offset-4 text-2xl">Calculator</h1>
@@ -172,7 +192,7 @@
             <a href="../dist/projects/calculator.html" class="bg-slate-700 text-white md:w-full w-3/5 text-center py-3 mt-4 rounded-lg hover:scale-105 transition " target="_blank">View more</a>
           </div>
         </div>
-        <div class="relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
+        <div class="scrolleffect relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
           <img class="w-full h-64 rounded-lg" src="../dist/images/ecom.png" alt="">
 
           <h1 class="text-center font-bold underline underline-offset-4 text-2xl">Simple E-commerce</h1>
@@ -183,7 +203,7 @@
             <a href="../dist/projects/ecommerce-sample.html" class="bg-slate-700 text-white md:w-full w-3/5 text-center py-3 mt-4 rounded-lg hover:scale-105 transition " target="_blank">View more</a>
           </div>
         </div>
-        <div class="relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
+        <div class="scrolleffect relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
           <img class="w-full h-64 rounded-lg" src="../dist/images/portal.png" alt="">
 
           <h1 class="text-center font-bold underline underline-offset-4 text-2xl">Landing Page</h1>
@@ -194,7 +214,7 @@
             <a href="../dist/projects/landing-page.html" class="bg-slate-700 text-white md:w-full w-3/5 text-center py-3 mt-4 rounded-lg hover:scale-105 transition " target="_blank">View more</a>
           </div>
         </div>
-        <div class="relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
+        <div class="scrolleffect relative h-full rounded-2xl hover:scale-105 transition shadow-lg shadow-emerald-400 bg-white p-3">
           <img class="w-full h-64 rounded-lg" src="../dist/images/portal.png" alt="">
 
           <h1 class="text-center font-bold underline underline-offset-4 text-2xl">Landing Page</h1>
