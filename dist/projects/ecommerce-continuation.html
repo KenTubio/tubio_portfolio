@@ -11,7 +11,7 @@
 </head>
 <body class="bg-slate-200 font-rubik" >
     <main>
-        <header class="fixed left-0 right-0 top-0 bg-green-400 px-32 py-3 z-50 lg:px-5 sm:px-2">
+        <header class="fixed left-0 right-0 top-0 bg-green-400 px-32 py-3 z-20 lg:px-5 sm:px-2">
             <nav class="flex justify-between text-sm font-sans sm:items-center">
                 <div class="flex gap-2 sm:text-xs  xs:text-[.7rem]">
                     <span class="hover:underline">Start Selling</span>
@@ -40,7 +40,7 @@
         </header>
 
         <!-- CART POP UP TO DITO PART -->
-        <div id="popup-container" class="fixed z-50 bg-[#1b641bc2] flex justify-center items-center left-0 right-0 top-0 bottom-0 backdrop-blur-md hidden p-2">
+        <div id="popup-container" class="fixed z-30 bg-[#1b641bc2] flex justify-center items-center left-0 right-0 top-0 bottom-0 backdrop-blur-md hidden p-2">
             <figure id="popup" class="bg-white rounded-md h-4/6 overflow-y-auto w-2/5 relative xl:w-2/4 lg:w-3/5 md:w-4/5 sm:w-full">
                 <article id="popup-content" class="flex flex-col gap-2">
                     <header class="flex shadow-md justify-between items-center px-5 sticky top-0 z-20 bg-green-200">
@@ -68,8 +68,8 @@
                         <div class="w-full shrink-0"><img class="h-full w-full" src="../images/shopee1.png" alt=""></div>
                     </figure>
                     
-                    <i id="before" class="fa-solid fa-chevron-left text-2xl border-2 font-bold absolute left-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-30 bg-[#00000080] text-white p-1 py-3 z"></i>
-                    <i id="next" class="fa-solid fa-chevron-right text-2xl border-2 font-bold absolute right-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-30 bg-[#00000080] text-white p-1 py-3"></i>
+                    <i id="before" class="fa-solid fa-chevron-left text-2xl border-2 font-bold absolute left-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-20 bg-[#00000080] text-white p-1 py-3 z"></i>
+                    <i id="next" class="fa-solid fa-chevron-right text-2xl border-2 font-bold absolute right-0 top-1/2 transform -translate-y-1/2 hover:scale-110 transition z-20 bg-[#00000080] text-white p-1 py-3"></i>
                 </div>
                 <figure class="w-2/6 flex flex-col gap-2 h-full shadow-lg sm:hidden">
                     <img class="w-full h-2/4 object-cover object-center" src="../images/ads4.jpg" alt="">
@@ -1764,18 +1764,18 @@
 
 
         <!-- DITO YUNG POPUP SA DELIVERY DETAILS -->
-        <article id="popup-delivery" class=" hidden w-3/5 z-50 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-200 p-10">
+        <article id="popup-delivery" class=" hidden sm:w-full sm:p-5 w-3/5 z-40 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 rounded-md p-10">
             <span id="closeBtn" class="text-3xl hover:scale-110 transition cursor-pointer absolute right-6 top-6"><i class="fa-solid fa-close"></i></span>
-            <h1 class="font-bold text-3xl mb-7">Shipping Details</h1>
+            <h1 class="font-bold text-3xl mb-7 sm:text-xl">Shipping Details</h1>
 
             <form class="">
                 <article class="grid grid-cols-2 gap-4">
-                    <input class="p-3 rounded-md" type="text" placeholder="Company Name (Optional)">
-                    <input class="p-3 rounded-md" type="text" placeholder="Name">
-                    <input class="p-3 rounded-md" type="number" placeholder="Postal Code">
-                    <input class="p-3 rounded-md" type="text" placeholder="Phone Number">
+                    <input class="p-3 rounded-md" type="text" placeholder="Company Name (Optional)" required>
+                    <input class="p-3 rounded-md" type="text" placeholder="Name" required>
+                    <input class="p-3 rounded-md" type="number" placeholder="Postal Code" required>
+                    <input class="p-3 rounded-md" type="number" placeholder="Phone Number" required>
                     <div class="w-full">
-                        <select class="p-3 w-full rounded-md" name="city" id="city">
+                        <select class="p-3 w-full rounded-md" name="city" id="city" required>
                             <option value="">City:</option>
                             <option value="">Manila</option>
                             <option value="">Quezon City</option>
@@ -1801,7 +1801,7 @@
                     </div>
 
                     <div >
-                        <select class="p-3 rounded-md w-full" name="district" id="district">
+                        <select class="p-3 rounded-md w-full" name="district" id="district" required>
                             <option value="">District: </option>
                             <option value="">Binondo (Manila)</option>
                             <option value="">Tondo (Manila)</option>
@@ -1826,9 +1826,9 @@
                         </select>
                     </div>
                 </article>
-                <textarea class="w-full resize-none mt-3 rounded-md h-28 p-3" name="" id="" placeholder="Address (Area and Street)"></textarea>
+                <textarea class="w-full resize-none mt-3 rounded-md h-28 p-3" name="" id="" placeholder="Address (Area and Street)" required></textarea>
 
-                <select class="p-3 w-full rounded-md mt-2" name="" id="">
+                <select class="p-3 w-full rounded-md mt-2" name="" id="" required>
                     <option value="">Payment Method: </option>
                     <optgroup label="Cash">
                         <option value="">Cash on Delivery</option>
@@ -1839,9 +1839,21 @@
                         <option value="">Paypal</option>
                     </optgroup>
                 </select>
+                <button id="deliveryBtn" class="w-full rounded-md bg-green-700 text-white mt-3 py-3 text-xl">Deliver here</button>
             </form>
 
-            <button id="deliveryBtn" class="w-full rounded-md bg-green-500 text-white mt-3 py-3 text-xl">Deliver here</button>
+            
+        </article>
+
+        <article id="tyMessage" class="rounded-xl items-center bg-green-100 shadow-lg flex flex-col fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 gap-3 px-7 sm:px-2 py-12 hidden">
+            <i id="back" class="fa-solid fa-close bg-slate-300 text-2xl px-3 py-2 rounded-full absolute -right-3 -top-2 shadow-md hover:scale-110 transition"></i>
+            <img class="w-20 sm:w-16" src="../images/check.png" alt="">
+            <span class="text-center font-bold font-rubik text-xl text-green-900 sm:text-lg">
+                <h1>Woohoo!</h1>
+                <h1>Your order has been placed</h1>
+            </span>
+            <p class="text-slate-600 w-80 text-center sm:text-sm">Thanks for ordering! Now, sit back and relax as your order is on its way to you!</p>
+            
         </article>
  
     </main>

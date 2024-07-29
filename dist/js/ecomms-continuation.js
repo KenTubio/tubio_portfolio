@@ -186,22 +186,28 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
     const closeButton = document.querySelector('#closeBtn');
     const deliveryBtn = document.querySelector('#deliveryBtn');
 
-   
+    const message = document.getElementById('tyMessage');
     deliveryBtn.addEventListener('click', ()=>{
       itemContainer.classList.add('hidden');
       button.style.pointerEvents = 'auto';
       button.style.opacity = '1';   
       countDisplay = 0;
       cartNumDisplay.textContent = countDisplay;
-      
-      const thankYouMessage = document.createElement('div');
-      thankYouMessage.classList.add('rounded-md', 'p-3', 'text-3xl', 'bg-green-500', 'text-white', 'absolute', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2');
-      deliveryPopUp.appendChild(thankYouMessage);
 
-      const message = document.createElement('p');
-      message.innerText = 'Thanks for Buying!';
-      thankYouMessage.appendChild(message);
+      
+      message.classList.toggle('hidden');
+
+      deliveryPopUp.classList.toggle('hidden');
+
+      popupContainer.classList.toggle('hidden');
+
+   
     })  
+
+    const back = document.getElementById('back');
+    back.addEventListener('click', ()=>{
+      message.classList.toggle('hidden');
+    } );
 
     checkoutAllBtn.addEventListener('click', () => {
       deliveryPopUp.classList.toggle('hidden');
