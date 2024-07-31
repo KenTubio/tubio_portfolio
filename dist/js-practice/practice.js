@@ -245,3 +245,30 @@ taskBtn.addEventListener('click',  ()=>{
 })
 
 
+
+function myName(){
+    let name = 'kenneth';
+    function shoo(){
+        console.log('my name is ' + name);
+    }
+    return shoo;
+}
+let shooFunction = myName(); // Call `myName` to get the `shoo` function
+shooFunction(); 
+
+const test = document.getElementById('test');
+const clickBtn = document.getElementById('click');
+const next = document.getElementById('next');
+const textImg = document.getElementById('imgTest');
+const demo = document.getElementById('demo');
+
+clickBtn.addEventListener('click', ()=>{
+    textImg.src = '../images/vege2-section2.jpg';
+    demo.innerHTML = Date();
+})
+
+next.addEventListener('click', ()=>{
+    textImg.src = '../images/vege1.jpg'
+})
+
+

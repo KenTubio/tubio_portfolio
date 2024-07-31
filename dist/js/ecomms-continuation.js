@@ -207,6 +207,7 @@ document.querySelectorAll('#add-to-cart').forEach(button => {
     const back = document.getElementById('back');
     back.addEventListener('click', ()=>{
       message.classList.toggle('hidden');
+      document.body.style.overflowY = 'scroll';
     } );
 
     checkoutAllBtn.addEventListener('click', () => {
