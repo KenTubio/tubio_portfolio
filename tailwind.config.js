@@ -24,6 +24,7 @@ module.exports = {
       fontFamily: {
         'dancing': ['Dancing Script', 'cursive'],
         'rubik': ['Rubik', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
       },
       blur:{
         'xs':['2px'],

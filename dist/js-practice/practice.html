@@ -10,6 +10,17 @@
     />
     <title>Practice Javascript</title>
     <style>
+        #bilog{
+            animation: spin 1s infinite;
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
         @keyframes down {
             from {
                 transform: translateY(-100%);
@@ -149,13 +160,21 @@
     </section>
 
     <section class="bg-red-200"> 
-        <h1 id="test" class="text-4xl font-bold">Practice muna</h1>
-        <button id="click" class="bg-red-300 p-2 rounded-md">Click to change</button>
-        <img id="imgTest" src="../images/vege1.jpg " alt="">
-        <button id="next" class="bg-red-300 p-2 rounded-md">Click to to back</button>
+        <div class="flex">
+            <h1 id="test" class="text-4xl font-bold">Practice muna</h1>
+            <button id="click" class="bg-red-300 p-2 rounded-md">Click to change</button>
+            <img id="imgTest" class="w-40" src="../images/vege1.jpg " alt="">
+            <button id="next" class="bg-red-300 p-2 rounded-md">Click to to back</button>
 
-        <p id="demo"></p>
+            
+        </div>
+
+        <button id="brrt" class="bg-gray-500 text-white font-bold text-2xl p-3 rounded-md hover:scale-110 transition">CLICK THIS SHIIII</button>
     </section>
+
+    <div id="bilog" class="h-40 w-40 fixed top-1/2 left-1/2 hidden rounded-full border-t-8 border-t-green-600">
+     
+    </div>
 
     <script src="practice.js"></script> 
 </body>
