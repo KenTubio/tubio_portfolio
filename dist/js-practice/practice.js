@@ -1,15 +1,9 @@
-
-function fizz(num) {
-    for(let i = 1; i <= num; i++){
-        if(i % 3 == 0 && i % 5 == 0){
-            console.log(i+'.' + ' bazinnga')
-        }else if(i % 3 == 0){
-            console.log(i+'.' + ' fizz')
-        }else if(i % 5 == 0){
-            console.log(i+'.' + ' buzz')
-        }else{
-            console.log(i)
+function filter(arr, fn){
+    let array = [];
+    for(let i = 0; i<arr.length;i++){
+        if(fn(arr[i], i)){
+            array.push(arr[i])
         }
     }
+    return array;
 }
-fizz(20);

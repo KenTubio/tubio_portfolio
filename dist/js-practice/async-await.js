@@ -1,22 +1,26 @@
-const url = "https://api.thecatapi.com/v1/images/0XYvRd7oD";
-const display = document.getElementById("display");
+const url = "https://api.deezer.com/oembed?url=https://www.deezer.com/album/302127&maxwidth=700&maxheight=300&tracklist=true&format=json";
+
 
 async function myApi() {
   const response = await fetch(url);
   const jsonData = await response.json();
   console.log(jsonData);
-
-  const img = document.createElement("img");
-  img.src = jsonData.url;
-
-  const description = document.createElement("span");
-  description.textContent = jsonData.breeds[0].description + jsonData.breeds[0].name;
-
-  display.appendChild(description);
-  display.appendChild(img);
 }
 
 myApi();
+// function timeRunning (){
+//   const time = new Date();
+
+//   const hours = String(time.getHours()).padStart(2, 0);
+//   const minutes = String(time.getMinutes()).padStart(2, 0);
+//   const seconds = String(time.getSeconds()).padStart(2, 0);
+
+//   display.innerHTML = `${hours}:${minutes}:${seconds}`
+
+// }
+// timeRunning();
+
+// setInterval(timeRunning, 1000);
 
 // let storeItems = {
 //   Bag: ["totebag", "slingbag", "backpack"],
