@@ -54,6 +54,8 @@ contactsLink.addEventListener('click', ()=>{
     contactsLink.classList.toggle('before:w-full');
 })
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init();
 });
