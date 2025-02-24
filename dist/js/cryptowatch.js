@@ -153,6 +153,15 @@ document.getElementById('bitcoin').addEventListener('click', () => {
 
 
 function usdtPopUp(cryptoData) {
+    const coinName = "tether"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+        return;
+    }
+
+    
     const usdtContainer = document.createElement('div');
     usdtContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -164,18 +173,18 @@ function usdtPopUp(cryptoData) {
 
     const usdtLogo = document.createElement('img');
     usdtLogo.classList.add('w-9');
-    usdtLogo.src = cryptoData[2].image;
+    usdtLogo.src = coin.image;
     usdtLogo.alt = 'USDT';
     usdtPriceAndLogo.appendChild(usdtLogo);
 
     const usdtName = document.createElement('span');
     usdtName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    usdtName.textContent = cryptoData[2].name;
+    usdtName.textContent = coin.name;
     usdtPriceAndLogo.appendChild(usdtName);
 
     const usdtSymbol = document.createElement('span');
     usdtSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    usdtSymbol.textContent = cryptoData[2].symbol;
+    usdtSymbol.textContent = coin.symbol;
     usdtPriceAndLogo.appendChild(usdtSymbol);
 
     const closeBtn = document.createElement('span');
@@ -188,7 +197,7 @@ function usdtPopUp(cryptoData) {
 
     const usdtPrice = document.createElement('div');
     usdtPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    usdtPrice.textContent = '$'+ Number(cryptoData[2].current_price).toFixed(2).toLocaleString('en-US');
+    usdtPrice.textContent = '$'+ Number(coin.current_price).toFixed(2).toLocaleString('en-US');
     usdtContainer.appendChild(usdtPrice);
 
     const usdtMarketCapContainer = document.createElement('div');
@@ -202,7 +211,7 @@ function usdtPopUp(cryptoData) {
 
     const usdtMarketCapPrice = document.createElement('span');
     usdtMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold')
-    usdtMarketCapPrice.textContent = '$'+ Number(cryptoData[2].market_cap).toLocaleString('en-US');
+    usdtMarketCapPrice.textContent = '$'+ Number(coin.market_cap).toLocaleString('en-US');
     usdtMarketCapContainer.appendChild(usdtMarketCapPrice);
 
     const usdtFullyDilutedContainer = document.createElement('div');
@@ -216,7 +225,7 @@ function usdtPopUp(cryptoData) {
 
     const usdtFullyDilutedPrice = document.createElement('span');
     usdtFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold')
-    usdtFullyDilutedPrice.textContent = '$'+ Number(cryptoData[2].fully_diluted_valuation).toLocaleString('en-US');
+    usdtFullyDilutedPrice.textContent = '$'+ Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     usdtFullyDilutedContainer.appendChild(usdtFullyDilutedPrice);
 
     const usdtTotalVolumeContainer = document.createElement('div');
@@ -230,7 +239,7 @@ function usdtPopUp(cryptoData) {
 
     const usdtTotalVolumePrice = document.createElement('span');
     usdtTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold')
-    usdtTotalVolumePrice.textContent = '$'+ Number(cryptoData[2].total_volume).toLocaleString('en-US');
+    usdtTotalVolumePrice.textContent = '$'+ Number(coin.total_volume).toLocaleString('en-US');
     usdtTotalVolumeContainer.appendChild(usdtTotalVolumePrice);
 
     const usdtCirculatingSupplyContainer = document.createElement('div');
@@ -244,7 +253,7 @@ function usdtPopUp(cryptoData) {
 
     const usdtCirculatingSupplyPrice = document.createElement('span');
     usdtCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold')
-    usdtCirculatingSupplyPrice.textContent = Number(cryptoData[2].circulating_supply).toLocaleString('en-US');
+    usdtCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     usdtCirculatingSupplyContainer.appendChild(usdtCirculatingSupplyPrice);
 
     const usdtTotalSupplyContainer = document.createElement('div');
@@ -258,7 +267,7 @@ function usdtPopUp(cryptoData) {
 
     const usdtTotalSupplyPrice = document.createElement('span');
     usdtTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold')
-    usdtTotalSupplyPrice.textContent = Number(cryptoData[2].total_supply).toLocaleString('en-US');
+    usdtTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     usdtTotalSupplyContainer.appendChild(usdtTotalSupplyPrice);
 
     const usdtMaxSupplyContainer = document.createElement('div');
@@ -272,7 +281,7 @@ function usdtPopUp(cryptoData) {
 
     const usdtMaxSupplyPrice = document.createElement('span');
     usdtMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold')
-    usdtMaxSupplyPrice.textContent = Number(cryptoData[2].max_supply).toLocaleString('en-US');
+    usdtMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     usdtMaxSupplyContainer.appendChild(usdtMaxSupplyPrice);
 }
 
@@ -287,6 +296,14 @@ document.getElementById('usdt').addEventListener('click', () => {
 
 
 function ethPopUp(cryptoData) {
+    const coinName = "Ethereum"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const ethContainer = document.createElement('div');
     ethContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -298,18 +315,18 @@ function ethPopUp(cryptoData) {
 
     const ethLogo = document.createElement('img');
     ethLogo.classList.add('w-9');
-    ethLogo.src = cryptoData[1].image;
+    ethLogo.src = coin.image;
     ethLogo.alt = 'ETH';
     ethPriceAndLogo.appendChild(ethLogo);
 
     const ethName = document.createElement('span');
     ethName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    ethName.textContent = cryptoData[1].name;
+    ethName.textContent = coin.name;
     ethPriceAndLogo.appendChild(ethName);
 
     const ethSymbol = document.createElement('span');
     ethSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    ethSymbol.textContent = cryptoData[1].symbol;
+    ethSymbol.textContent = coin.symbol;
     ethPriceAndLogo.appendChild(ethSymbol);
 
     const closeBtn = document.createElement('span');
@@ -322,7 +339,7 @@ function ethPopUp(cryptoData) {
 
     const ethPrice = document.createElement('div');
     ethPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    ethPrice.textContent = '$' + Number(cryptoData[1].current_price).toFixed(2).toLocaleString('en-US');
+    ethPrice.textContent = '$' + Number(coin.current_price).toFixed(2).toLocaleString('en-US');
     ethContainer.appendChild(ethPrice);
 
     const ethMarketCapContainer = document.createElement('div');
@@ -336,7 +353,7 @@ function ethPopUp(cryptoData) {
 
     const ethMarketCapPrice = document.createElement('span');
     ethMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    ethMarketCapPrice.textContent = '$' + Number(cryptoData[1].market_cap).toLocaleString('en-US');
+    ethMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     ethMarketCapContainer.appendChild(ethMarketCapPrice);
 
     const ethFullyDilutedContainer = document.createElement('div');
@@ -350,7 +367,7 @@ function ethPopUp(cryptoData) {
 
     const ethFullyDilutedPrice = document.createElement('span');
     ethFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    ethFullyDilutedPrice.textContent = '$' + Number(cryptoData[1].fully_diluted_valuation).toLocaleString('en-US');
+    ethFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     ethFullyDilutedContainer.appendChild(ethFullyDilutedPrice);
 
     const ethTotalVolumeContainer = document.createElement('div');
@@ -364,7 +381,7 @@ function ethPopUp(cryptoData) {
 
     const ethTotalVolumePrice = document.createElement('span');
     ethTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    ethTotalVolumePrice.textContent = '$' + Number(cryptoData[1].total_volume).toLocaleString('en-US');
+    ethTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     ethTotalVolumeContainer.appendChild(ethTotalVolumePrice);
 
     const ethCirculatingSupplyContainer = document.createElement('div');
@@ -378,7 +395,7 @@ function ethPopUp(cryptoData) {
 
     const ethCirculatingSupplyPrice = document.createElement('span');
     ethCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    ethCirculatingSupplyPrice.textContent = Number(cryptoData[1].circulating_supply).toLocaleString('en-US');
+    ethCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     ethCirculatingSupplyContainer.appendChild(ethCirculatingSupplyPrice);
 
     const ethTotalSupplyContainer = document.createElement('div');
@@ -392,7 +409,7 @@ function ethPopUp(cryptoData) {
 
     const ethTotalSupplyPrice = document.createElement('span');
     ethTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    ethTotalSupplyPrice.textContent = Number(cryptoData[1].total_supply).toLocaleString('en-US');
+    ethTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     ethTotalSupplyContainer.appendChild(ethTotalSupplyPrice);
 
     const ethMaxSupplyContainer = document.createElement('div');
@@ -406,7 +423,7 @@ function ethPopUp(cryptoData) {
 
     const ethMaxSupplyPrice = document.createElement('span');
     ethMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    ethMaxSupplyPrice.textContent = Number(cryptoData[1].max_supply).toLocaleString('en-US');
+    ethMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     ethMaxSupplyContainer.appendChild(ethMaxSupplyPrice);
 }
 
@@ -421,6 +438,14 @@ document.getElementById('eth').addEventListener('click', () => {
 
 
 function bnbPopUp(cryptoData) {
+    const coinName = "Bnb"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const bnbContainer = document.createElement('div');
     bnbContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -432,18 +457,18 @@ function bnbPopUp(cryptoData) {
 
     const bnbLogo = document.createElement('img');
     bnbLogo.classList.add('w-9');
-    bnbLogo.src = cryptoData[3].image;
+    bnbLogo.src = coin.image;
     bnbLogo.alt = 'BNB';
     bnbPriceAndLogo.appendChild(bnbLogo);
 
     const bnbName = document.createElement('span');
     bnbName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    bnbName.textContent = cryptoData[3].name;
+    bnbName.textContent = coin.name;
     bnbPriceAndLogo.appendChild(bnbName);
 
     const bnbSymbol = document.createElement('span');
     bnbSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    bnbSymbol.textContent = cryptoData[3].symbol;
+    bnbSymbol.textContent = coin.symbol;
     bnbPriceAndLogo.appendChild(bnbSymbol);
 
     const closeBtn = document.createElement('span');
@@ -456,7 +481,7 @@ function bnbPopUp(cryptoData) {
 
     const bnbPrice = document.createElement('div');
     bnbPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    bnbPrice.textContent = '$' + Number(cryptoData[3].current_price).toFixed(2).toLocaleString('en-US');
+    bnbPrice.textContent = '$' + Number(coin.current_price).toFixed(2).toLocaleString('en-US');
     bnbContainer.appendChild(bnbPrice);
 
     const bnbMarketCapContainer = document.createElement('div');
@@ -470,7 +495,7 @@ function bnbPopUp(cryptoData) {
 
     const bnbMarketCapPrice = document.createElement('span');
     bnbMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    bnbMarketCapPrice.textContent = '$' + Number(cryptoData[3].market_cap).toLocaleString('en-US');
+    bnbMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     bnbMarketCapContainer.appendChild(bnbMarketCapPrice);
 
     const bnbFullyDilutedContainer = document.createElement('div');
@@ -484,7 +509,7 @@ function bnbPopUp(cryptoData) {
 
     const bnbFullyDilutedPrice = document.createElement('span');
     bnbFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    bnbFullyDilutedPrice.textContent = '$' + Number(cryptoData[3].fully_diluted_valuation).toLocaleString('en-US');
+    bnbFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     bnbFullyDilutedContainer.appendChild(bnbFullyDilutedPrice);
 
     const bnbTotalVolumeContainer = document.createElement('div');
@@ -498,7 +523,7 @@ function bnbPopUp(cryptoData) {
 
     const bnbTotalVolumePrice = document.createElement('span');
     bnbTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    bnbTotalVolumePrice.textContent = '$' + Number(cryptoData[3].total_volume).toLocaleString('en-US');
+    bnbTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     bnbTotalVolumeContainer.appendChild(bnbTotalVolumePrice);
 
     const bnbCirculatingSupplyContainer = document.createElement('div');
@@ -512,7 +537,7 @@ function bnbPopUp(cryptoData) {
 
     const bnbCirculatingSupplyPrice = document.createElement('span');
     bnbCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    bnbCirculatingSupplyPrice.textContent = Number(cryptoData[3].circulating_supply).toLocaleString('en-US');
+    bnbCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     bnbCirculatingSupplyContainer.appendChild(bnbCirculatingSupplyPrice);
 
     const bnbTotalSupplyContainer = document.createElement('div');
@@ -526,7 +551,7 @@ function bnbPopUp(cryptoData) {
 
     const bnbTotalSupplyPrice = document.createElement('span');
     bnbTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    bnbTotalSupplyPrice.textContent = Number(cryptoData[3].total_supply).toLocaleString('en-US');
+    bnbTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     bnbTotalSupplyContainer.appendChild(bnbTotalSupplyPrice);
 
     const bnbMaxSupplyContainer = document.createElement('div');
@@ -540,7 +565,7 @@ function bnbPopUp(cryptoData) {
 
     const bnbMaxSupplyPrice = document.createElement('span');
     bnbMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    bnbMaxSupplyPrice.textContent = Number(cryptoData[3].max_supply).toLocaleString('en-US');
+    bnbMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     bnbMaxSupplyContainer.appendChild(bnbMaxSupplyPrice);
 }
 
@@ -555,6 +580,14 @@ document.getElementById('bnb').addEventListener('click', () => {
 
 
 function usdcPopUp(cryptoData) {
+    const coinName = "Usdc"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+    
     const usdcContainer = document.createElement('div');
     usdcContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -566,18 +599,18 @@ function usdcPopUp(cryptoData) {
 
     const usdcLogo = document.createElement('img');
     usdcLogo.classList.add('w-9');
-    usdcLogo.src = cryptoData[5].image;
+    usdcLogo.src = coin.image;
     usdcLogo.alt = 'USDC';
     usdcPriceAndLogo.appendChild(usdcLogo);
 
     const usdcName = document.createElement('span');
     usdcName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    usdcName.textContent = cryptoData[5].name;
+    usdcName.textContent = coin.name;
     usdcPriceAndLogo.appendChild(usdcName);
 
     const usdcSymbol = document.createElement('span');
     usdcSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    usdcSymbol.textContent = cryptoData[5].symbol;
+    usdcSymbol.textContent = coin.symbol;
     usdcPriceAndLogo.appendChild(usdcSymbol);
 
     const closeBtn = document.createElement('span');
@@ -590,7 +623,7 @@ function usdcPopUp(cryptoData) {
 
     const usdcPrice = document.createElement('div');
     usdcPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    usdcPrice.textContent = '$' + Number(cryptoData[5].current_price).toFixed(2).toLocaleString('en-US');
+    usdcPrice.textContent = '$' + Number(coin.current_price).toFixed(2).toLocaleString('en-US');
     usdcContainer.appendChild(usdcPrice);
 
     const usdcMarketCapContainer = document.createElement('div');
@@ -604,7 +637,7 @@ function usdcPopUp(cryptoData) {
 
     const usdcMarketCapPrice = document.createElement('span');
     usdcMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    usdcMarketCapPrice.textContent = '$' + Number(cryptoData[5].market_cap).toLocaleString('en-US');
+    usdcMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     usdcMarketCapContainer.appendChild(usdcMarketCapPrice);
 
     const usdcFullyDilutedContainer = document.createElement('div');
@@ -618,7 +651,7 @@ function usdcPopUp(cryptoData) {
 
     const usdcFullyDilutedPrice = document.createElement('span');
     usdcFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    usdcFullyDilutedPrice.textContent = '$' + Number(cryptoData[5].fully_diluted_valuation).toLocaleString('en-US');
+    usdcFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     usdcFullyDilutedContainer.appendChild(usdcFullyDilutedPrice);
 
     const usdcTotalVolumeContainer = document.createElement('div');
@@ -632,7 +665,7 @@ function usdcPopUp(cryptoData) {
 
     const usdcTotalVolumePrice = document.createElement('span');
     usdcTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    usdcTotalVolumePrice.textContent = '$' + Number(cryptoData[5].total_volume).toLocaleString('en-US');
+    usdcTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     usdcTotalVolumeContainer.appendChild(usdcTotalVolumePrice);
 
     const usdcCirculatingSupplyContainer = document.createElement('div');
@@ -646,7 +679,7 @@ function usdcPopUp(cryptoData) {
 
     const usdcCirculatingSupplyPrice = document.createElement('span');
     usdcCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    usdcCirculatingSupplyPrice.textContent = Number(cryptoData[5].circulating_supply).toLocaleString('en-US');
+    usdcCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     usdcCirculatingSupplyContainer.appendChild(usdcCirculatingSupplyPrice);
 
     const usdcTotalSupplyContainer = document.createElement('div');
@@ -660,7 +693,7 @@ function usdcPopUp(cryptoData) {
 
     const usdcTotalSupplyPrice = document.createElement('span');
     usdcTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    usdcTotalSupplyPrice.textContent = Number(cryptoData[5].total_supply).toLocaleString('en-US');
+    usdcTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     usdcTotalSupplyContainer.appendChild(usdcTotalSupplyPrice);
 
     const usdcMaxSupplyContainer = document.createElement('div');
@@ -674,7 +707,7 @@ function usdcPopUp(cryptoData) {
 
     const usdcMaxSupplyPrice = document.createElement('span');
     usdcMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    usdcMaxSupplyPrice.textContent = Number(cryptoData[5].max_supply).toLocaleString('en-US');
+    usdcMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     usdcMaxSupplyContainer.appendChild(usdcMaxSupplyPrice);
 }
 
@@ -689,6 +722,14 @@ document.getElementById('usdc').addEventListener('click', () => {
 
 
 function xrpPopUp(cryptoData) {
+    const coinName = "Xrp"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const xrpContainer = document.createElement('div');
     xrpContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -700,18 +741,18 @@ function xrpPopUp(cryptoData) {
 
     const xrpLogo = document.createElement('img');
     xrpLogo.classList.add('w-9');
-    xrpLogo.src = cryptoData[6].image;
+    xrpLogo.src = coin.image;
     xrpLogo.alt = 'XRP';
     xrpPriceAndLogo.appendChild(xrpLogo);
 
     const xrpName = document.createElement('span');
     xrpName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    xrpName.textContent = cryptoData[6].name;
+    xrpName.textContent = coin.name;
     xrpPriceAndLogo.appendChild(xrpName);
 
     const xrpSymbol = document.createElement('span');
     xrpSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    xrpSymbol.textContent = cryptoData[6].symbol;
+    xrpSymbol.textContent = coin.symbol;
     xrpPriceAndLogo.appendChild(xrpSymbol);
 
     const closeBtn = document.createElement('span');
@@ -724,7 +765,7 @@ function xrpPopUp(cryptoData) {
 
     const xrpPrice = document.createElement('div');
     xrpPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    xrpPrice.textContent = '$' + Number(cryptoData[6].current_price).toFixed(4).toLocaleString('en-US');
+    xrpPrice.textContent = '$' + Number(coin.current_price).toFixed(4).toLocaleString('en-US');
     xrpContainer.appendChild(xrpPrice);
 
     const xrpMarketCapContainer = document.createElement('div');
@@ -738,7 +779,7 @@ function xrpPopUp(cryptoData) {
 
     const xrpMarketCapPrice = document.createElement('span');
     xrpMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    xrpMarketCapPrice.textContent = '$' + Number(cryptoData[6].market_cap).toLocaleString('en-US');
+    xrpMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     xrpMarketCapContainer.appendChild(xrpMarketCapPrice);
 
     const xrpFullyDilutedContainer = document.createElement('div');
@@ -752,7 +793,7 @@ function xrpPopUp(cryptoData) {
 
     const xrpFullyDilutedPrice = document.createElement('span');
     xrpFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    xrpFullyDilutedPrice.textContent = '$' + Number(cryptoData[6].fully_diluted_valuation).toLocaleString('en-US');
+    xrpFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     xrpFullyDilutedContainer.appendChild(xrpFullyDilutedPrice);
 
     const xrpTotalVolumeContainer = document.createElement('div');
@@ -766,7 +807,7 @@ function xrpPopUp(cryptoData) {
 
     const xrpTotalVolumePrice = document.createElement('span');
     xrpTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    xrpTotalVolumePrice.textContent = '$' + Number(cryptoData[6].total_volume).toLocaleString('en-US');
+    xrpTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     xrpTotalVolumeContainer.appendChild(xrpTotalVolumePrice);
 
     const xrpCirculatingSupplyContainer = document.createElement('div');
@@ -780,7 +821,7 @@ function xrpPopUp(cryptoData) {
 
     const xrpCirculatingSupplyPrice = document.createElement('span');
     xrpCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    xrpCirculatingSupplyPrice.textContent = Number(cryptoData[6].circulating_supply).toLocaleString('en-US');
+    xrpCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     xrpCirculatingSupplyContainer.appendChild(xrpCirculatingSupplyPrice);
 
     const xrpTotalSupplyContainer = document.createElement('div');
@@ -794,7 +835,7 @@ function xrpPopUp(cryptoData) {
 
     const xrpTotalSupplyPrice = document.createElement('span');
     xrpTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    xrpTotalSupplyPrice.textContent = Number(cryptoData[6].total_supply).toLocaleString('en-US');
+    xrpTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     xrpTotalSupplyContainer.appendChild(xrpTotalSupplyPrice);
 
     const xrpMaxSupplyContainer = document.createElement('div');
@@ -808,7 +849,7 @@ function xrpPopUp(cryptoData) {
 
     const xrpMaxSupplyPrice = document.createElement('span');
     xrpMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    xrpMaxSupplyPrice.textContent = Number(cryptoData[6].max_supply).toLocaleString('en-US');
+    xrpMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     xrpMaxSupplyContainer.appendChild(xrpMaxSupplyPrice);
 }
 
@@ -823,6 +864,14 @@ document.getElementById('xrp').addEventListener('click', () => {
 
 
 function cardanoPopUp(cryptoData) {
+    const coinName = "Cardano"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const cardanoContainer = document.createElement('div');
     cardanoContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -834,18 +883,18 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoLogo = document.createElement('img');
     cardanoLogo.classList.add('w-9');
-    cardanoLogo.src = cryptoData[11].image;
+    cardanoLogo.src = coin.image;
     cardanoLogo.alt = 'Cardano';
     cardanoPriceAndLogo.appendChild(cardanoLogo);
 
     const cardanoName = document.createElement('span');
     cardanoName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    cardanoName.textContent = cryptoData[11].name;
+    cardanoName.textContent = coin.name;
     cardanoPriceAndLogo.appendChild(cardanoName);
 
     const cardanoSymbol = document.createElement('span');
     cardanoSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    cardanoSymbol.textContent = cryptoData[11].symbol;
+    cardanoSymbol.textContent = coin.symbol;
     cardanoPriceAndLogo.appendChild(cardanoSymbol);
 
     const closeBtn = document.createElement('span');
@@ -858,7 +907,7 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoPrice = document.createElement('div');
     cardanoPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    cardanoPrice.textContent = '$' + Number(cryptoData[11].current_price).toFixed(4).toLocaleString('en-US');
+    cardanoPrice.textContent = '$' + Number(coin.current_price).toFixed(4).toLocaleString('en-US');
     cardanoContainer.appendChild(cardanoPrice);
 
     const cardanoMarketCapContainer = document.createElement('div');
@@ -872,7 +921,7 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoMarketCapPrice = document.createElement('span');
     cardanoMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    cardanoMarketCapPrice.textContent = '$' + Number(cryptoData[11].market_cap).toLocaleString('en-US');
+    cardanoMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     cardanoMarketCapContainer.appendChild(cardanoMarketCapPrice);
 
     const cardanoFullyDilutedContainer = document.createElement('div');
@@ -886,7 +935,7 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoFullyDilutedPrice = document.createElement('span');
     cardanoFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    cardanoFullyDilutedPrice.textContent = '$' + Number(cryptoData[11].fully_diluted_valuation).toLocaleString('en-US');
+    cardanoFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     cardanoFullyDilutedContainer.appendChild(cardanoFullyDilutedPrice);
 
     const cardanoTotalVolumeContainer = document.createElement('div');
@@ -900,7 +949,7 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoTotalVolumePrice = document.createElement('span');
     cardanoTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    cardanoTotalVolumePrice.textContent = '$' + Number(cryptoData[11].total_volume).toLocaleString('en-US');
+    cardanoTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     cardanoTotalVolumeContainer.appendChild(cardanoTotalVolumePrice);
 
     const cardanoCirculatingSupplyContainer = document.createElement('div');
@@ -914,7 +963,7 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoCirculatingSupplyPrice = document.createElement('span');
     cardanoCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    cardanoCirculatingSupplyPrice.textContent = Number(cryptoData[11].circulating_supply).toLocaleString('en-US');
+    cardanoCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     cardanoCirculatingSupplyContainer.appendChild(cardanoCirculatingSupplyPrice);
 
     const cardanoTotalSupplyContainer = document.createElement('div');
@@ -928,7 +977,7 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoTotalSupplyPrice = document.createElement('span');
     cardanoTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    cardanoTotalSupplyPrice.textContent = Number(cryptoData[11].total_supply).toLocaleString('en-US');
+    cardanoTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     cardanoTotalSupplyContainer.appendChild(cardanoTotalSupplyPrice);
 
     const cardanoMaxSupplyContainer = document.createElement('div');
@@ -942,7 +991,7 @@ function cardanoPopUp(cryptoData) {
 
     const cardanoMaxSupplyPrice = document.createElement('span');
     cardanoMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    cardanoMaxSupplyPrice.textContent = Number(cryptoData[11].max_supply).toLocaleString('en-US');
+    cardanoMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     cardanoMaxSupplyContainer.appendChild(cardanoMaxSupplyPrice);
 }
 
@@ -958,6 +1007,14 @@ document.getElementById('cardano').addEventListener('click', () => {
 
 
 function solanaPopUp(cryptoData) {
+    const coinName = "Solana"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const solanaContainer = document.createElement('div');
     solanaContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -969,18 +1026,18 @@ function solanaPopUp(cryptoData) {
 
     const solanaLogo = document.createElement('img');
     solanaLogo.classList.add('w-9');
-    solanaLogo.src = cryptoData[4].image;
+    solanaLogo.src = coin.image;
     solanaLogo.alt = 'Solana';
     solanaPriceAndLogo.appendChild(solanaLogo);
 
     const solanaName = document.createElement('span');
     solanaName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    solanaName.textContent = cryptoData[4].name;
+    solanaName.textContent = coin.name;
     solanaPriceAndLogo.appendChild(solanaName);
 
     const solanaSymbol = document.createElement('span');
     solanaSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    solanaSymbol.textContent = cryptoData[4].symbol;
+    solanaSymbol.textContent = coin.symbol;
     solanaPriceAndLogo.appendChild(solanaSymbol);
 
     const closeBtn = document.createElement('span');
@@ -993,7 +1050,7 @@ function solanaPopUp(cryptoData) {
 
     const solanaPrice = document.createElement('div');
     solanaPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    solanaPrice.textContent = '$' + Number(cryptoData[4].current_price).toFixed(2).toLocaleString('en-US');
+    solanaPrice.textContent = '$' + Number(coin.current_price).toFixed(2).toLocaleString('en-US');
     solanaContainer.appendChild(solanaPrice);
 
     const solanaMarketCapContainer = document.createElement('div');
@@ -1007,7 +1064,7 @@ function solanaPopUp(cryptoData) {
 
     const solanaMarketCapPrice = document.createElement('span');
     solanaMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    solanaMarketCapPrice.textContent = '$' + Number(cryptoData[4].market_cap).toLocaleString('en-US');
+    solanaMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     solanaMarketCapContainer.appendChild(solanaMarketCapPrice);
 
     const solanaFullyDilutedContainer = document.createElement('div');
@@ -1021,7 +1078,7 @@ function solanaPopUp(cryptoData) {
 
     const solanaFullyDilutedPrice = document.createElement('span');
     solanaFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    solanaFullyDilutedPrice.textContent = '$' + Number(cryptoData[4].fully_diluted_valuation).toLocaleString('en-US');
+    solanaFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     solanaFullyDilutedContainer.appendChild(solanaFullyDilutedPrice);
 
     const solanaTotalVolumeContainer = document.createElement('div');
@@ -1035,7 +1092,7 @@ function solanaPopUp(cryptoData) {
 
     const solanaTotalVolumePrice = document.createElement('span');
     solanaTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    solanaTotalVolumePrice.textContent = '$' + Number(cryptoData[4].total_volume).toLocaleString('en-US');
+    solanaTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     solanaTotalVolumeContainer.appendChild(solanaTotalVolumePrice);
 
     const solanaCirculatingSupplyContainer = document.createElement('div');
@@ -1049,7 +1106,7 @@ function solanaPopUp(cryptoData) {
 
     const solanaCirculatingSupplyPrice = document.createElement('span');
     solanaCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    solanaCirculatingSupplyPrice.textContent = Number(cryptoData[4].circulating_supply).toLocaleString('en-US');
+    solanaCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     solanaCirculatingSupplyContainer.appendChild(solanaCirculatingSupplyPrice);
 
     const solanaTotalSupplyContainer = document.createElement('div');
@@ -1063,7 +1120,7 @@ function solanaPopUp(cryptoData) {
 
     const solanaTotalSupplyPrice = document.createElement('span');
     solanaTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    solanaTotalSupplyPrice.textContent = Number(cryptoData[4].total_supply).toLocaleString('en-US');
+    solanaTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     solanaTotalSupplyContainer.appendChild(solanaTotalSupplyPrice);
 
     const solanaMaxSupplyContainer = document.createElement('div');
@@ -1077,7 +1134,7 @@ function solanaPopUp(cryptoData) {
 
     const solanaMaxSupplyPrice = document.createElement('span');
     solanaMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    solanaMaxSupplyPrice.textContent = Number(cryptoData[4].max_supply).toLocaleString('en-US');
+    solanaMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     solanaMaxSupplyContainer.appendChild(solanaMaxSupplyPrice);
 }
 
@@ -1093,6 +1150,14 @@ document.getElementById('solana').addEventListener('click', () => {
 
 
 function polkadotPopUp(cryptoData) {
+    const coinName = "Polkadot"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const polkadotContainer = document.createElement('div');
     polkadotContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -1104,18 +1169,18 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotLogo = document.createElement('img');
     polkadotLogo.classList.add('w-9');
-    polkadotLogo.src = cryptoData[18].image;
+    polkadotLogo.src = coin.image;
     polkadotLogo.alt = 'Polkadot';
     polkadotPriceAndLogo.appendChild(polkadotLogo);
 
     const polkadotName = document.createElement('span');
     polkadotName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    polkadotName.textContent = cryptoData[18].name;
+    polkadotName.textContent = coin.name;
     polkadotPriceAndLogo.appendChild(polkadotName);
 
     const polkadotSymbol = document.createElement('span');
     polkadotSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    polkadotSymbol.textContent = cryptoData[18].symbol;
+    polkadotSymbol.textContent = coin.symbol;
     polkadotPriceAndLogo.appendChild(polkadotSymbol);
 
     const closeBtn = document.createElement('span');
@@ -1128,7 +1193,7 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotPrice = document.createElement('div');
     polkadotPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    polkadotPrice.textContent = '$' + Number(cryptoData[18].current_price).toFixed(2).toLocaleString('en-US');
+    polkadotPrice.textContent = '$' + Number(coin.current_price).toFixed(2).toLocaleString('en-US');
     polkadotContainer.appendChild(polkadotPrice);
 
     const polkadotMarketCapContainer = document.createElement('div');
@@ -1142,7 +1207,7 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotMarketCapPrice = document.createElement('span');
     polkadotMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    polkadotMarketCapPrice.textContent = '$' + Number(cryptoData[18].market_cap).toLocaleString('en-US');
+    polkadotMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     polkadotMarketCapContainer.appendChild(polkadotMarketCapPrice);
 
     const polkadotFullyDilutedContainer = document.createElement('div');
@@ -1156,7 +1221,7 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotFullyDilutedPrice = document.createElement('span');
     polkadotFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    polkadotFullyDilutedPrice.textContent = '$' + Number(cryptoData[18].fully_diluted_valuation).toLocaleString('en-US');
+    polkadotFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     polkadotFullyDilutedContainer.appendChild(polkadotFullyDilutedPrice);
 
     const polkadotTotalVolumeContainer = document.createElement('div');
@@ -1170,7 +1235,7 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotTotalVolumePrice = document.createElement('span');
     polkadotTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    polkadotTotalVolumePrice.textContent = '$' + Number(cryptoData[18].total_volume).toLocaleString('en-US');
+    polkadotTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     polkadotTotalVolumeContainer.appendChild(polkadotTotalVolumePrice);
 
     const polkadotCirculatingSupplyContainer = document.createElement('div');
@@ -1184,7 +1249,7 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotCirculatingSupplyPrice = document.createElement('span');
     polkadotCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    polkadotCirculatingSupplyPrice.textContent = Number(cryptoData[18].circulating_supply).toLocaleString('en-US');
+    polkadotCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     polkadotCirculatingSupplyContainer.appendChild(polkadotCirculatingSupplyPrice);
 
     const polkadotTotalSupplyContainer = document.createElement('div');
@@ -1198,7 +1263,7 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotTotalSupplyPrice = document.createElement('span');
     polkadotTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    polkadotTotalSupplyPrice.textContent = Number(cryptoData[18].total_supply).toLocaleString('en-US');
+    polkadotTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     polkadotTotalSupplyContainer.appendChild(polkadotTotalSupplyPrice);
 
     const polkadotMaxSupplyContainer = document.createElement('div');
@@ -1212,7 +1277,7 @@ function polkadotPopUp(cryptoData) {
 
     const polkadotMaxSupplyPrice = document.createElement('span');
     polkadotMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    polkadotMaxSupplyPrice.textContent = Number(cryptoData[18].max_supply).toLocaleString('en-US');
+    polkadotMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     polkadotMaxSupplyContainer.appendChild(polkadotMaxSupplyPrice);
 }
 
@@ -1228,6 +1293,14 @@ document.getElementById('polkadot').addEventListener('click', () => {
 
 
 function dogePopUp(cryptoData) {
+    const coinName = "Dogecoin"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const dogeContainer = document.createElement('div');
     dogeContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -1239,18 +1312,18 @@ function dogePopUp(cryptoData) {
 
     const dogeLogo = document.createElement('img');
     dogeLogo.classList.add('w-9');
-    dogeLogo.src = cryptoData[9].image;
+    dogeLogo.src = coin.image;
     dogeLogo.alt = 'Doge';
     dogePriceAndLogo.appendChild(dogeLogo);
 
     const dogeName = document.createElement('span');
     dogeName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    dogeName.textContent = cryptoData[9].name;
+    dogeName.textContent = coin.name;
     dogePriceAndLogo.appendChild(dogeName);
 
     const dogeSymbol = document.createElement('span');
     dogeSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    dogeSymbol.textContent = cryptoData[9].symbol;
+    dogeSymbol.textContent = coin.symbol;
     dogePriceAndLogo.appendChild(dogeSymbol);
 
     const closeBtn = document.createElement('span');
@@ -1263,7 +1336,7 @@ function dogePopUp(cryptoData) {
 
     const dogePrice = document.createElement('div');
     dogePrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    dogePrice.textContent = '$' + Number(cryptoData[9].current_price).toFixed(4).toLocaleString('en-US');
+    dogePrice.textContent = '$' + Number(coin.current_price).toFixed(4).toLocaleString('en-US');
     dogeContainer.appendChild(dogePrice);
 
     const dogeMarketCapContainer = document.createElement('div');
@@ -1277,7 +1350,7 @@ function dogePopUp(cryptoData) {
 
     const dogeMarketCapPrice = document.createElement('span');
     dogeMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    dogeMarketCapPrice.textContent = '$' + Number(cryptoData[9].market_cap).toLocaleString('en-US');
+    dogeMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     dogeMarketCapContainer.appendChild(dogeMarketCapPrice);
 
     const dogeFullyDilutedContainer = document.createElement('div');
@@ -1291,7 +1364,7 @@ function dogePopUp(cryptoData) {
 
     const dogeFullyDilutedPrice = document.createElement('span');
     dogeFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    dogeFullyDilutedPrice.textContent = '$' + Number(cryptoData[9].fully_diluted_valuation).toLocaleString('en-US');
+    dogeFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     dogeFullyDilutedContainer.appendChild(dogeFullyDilutedPrice);
 
     const dogeTotalVolumeContainer = document.createElement('div');
@@ -1305,7 +1378,7 @@ function dogePopUp(cryptoData) {
 
     const dogeTotalVolumePrice = document.createElement('span');
     dogeTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    dogeTotalVolumePrice.textContent = '$' + Number(cryptoData[9].total_volume).toLocaleString('en-US');
+    dogeTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     dogeTotalVolumeContainer.appendChild(dogeTotalVolumePrice);
 
     const dogeCirculatingSupplyContainer = document.createElement('div');
@@ -1319,7 +1392,7 @@ function dogePopUp(cryptoData) {
 
     const dogeCirculatingSupplyPrice = document.createElement('span');
     dogeCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    dogeCirculatingSupplyPrice.textContent = Number(cryptoData[9].circulating_supply).toLocaleString('en-US');
+    dogeCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     dogeCirculatingSupplyContainer.appendChild(dogeCirculatingSupplyPrice);
 
     const dogeTotalSupplyContainer = document.createElement('div');
@@ -1333,7 +1406,7 @@ function dogePopUp(cryptoData) {
 
     const dogeTotalSupplyPrice = document.createElement('span');
     dogeTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    dogeTotalSupplyPrice.textContent = Number(cryptoData[9].total_supply).toLocaleString('en-US');
+    dogeTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     dogeTotalSupplyContainer.appendChild(dogeTotalSupplyPrice);
 
     const dogeMaxSupplyContainer = document.createElement('div');
@@ -1347,7 +1420,7 @@ function dogePopUp(cryptoData) {
 
     const dogeMaxSupplyPrice = document.createElement('span');
     dogeMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    dogeMaxSupplyPrice.textContent = Number(cryptoData[9].max_supply).toLocaleString('en-US');
+    dogeMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     dogeMaxSupplyContainer.appendChild(dogeMaxSupplyPrice);
 }
 
@@ -1363,6 +1436,14 @@ document.getElementById('doge').addEventListener('click', () => {
 
 
 function litecoinPopUp(cryptoData) {
+    const coinName = "Litecoin"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const litecoinContainer = document.createElement('div');
     litecoinContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -1374,18 +1455,18 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinLogo = document.createElement('img');
     litecoinLogo.classList.add('w-9');
-    litecoinLogo.src = cryptoData[22].image;
+    litecoinLogo.src =coin.image;
     litecoinLogo.alt = 'Litecoin';
     litecoinPriceAndLogo.appendChild(litecoinLogo);
 
     const litecoinName = document.createElement('span');
     litecoinName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    litecoinName.textContent = cryptoData[22].name;
+    litecoinName.textContent = coin.name;
     litecoinPriceAndLogo.appendChild(litecoinName);
 
     const litecoinSymbol = document.createElement('span');
     litecoinSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    litecoinSymbol.textContent = cryptoData[22].symbol;
+    litecoinSymbol.textContent = coin.symbol;
     litecoinPriceAndLogo.appendChild(litecoinSymbol);
 
     const closeBtn = document.createElement('span');
@@ -1398,7 +1479,7 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinPrice = document.createElement('div');
     litecoinPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    litecoinPrice.textContent = '$' + Number(cryptoData[22].current_price).toFixed(2).toLocaleString('en-US');
+    litecoinPrice.textContent = '$' + Number(coin.current_price).toFixed(2).toLocaleString('en-US');
     litecoinContainer.appendChild(litecoinPrice);
 
     const litecoinMarketCapContainer = document.createElement('div');
@@ -1412,7 +1493,7 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinMarketCapPrice = document.createElement('span');
     litecoinMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    litecoinMarketCapPrice.textContent = '$' + Number(cryptoData[22].market_cap).toLocaleString('en-US');
+    litecoinMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     litecoinMarketCapContainer.appendChild(litecoinMarketCapPrice);
 
     const litecoinFullyDilutedContainer = document.createElement('div');
@@ -1426,7 +1507,7 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinFullyDilutedPrice = document.createElement('span');
     litecoinFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    litecoinFullyDilutedPrice.textContent = '$' + Number(cryptoData[22].fully_diluted_valuation).toLocaleString('en-US');
+    litecoinFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     litecoinFullyDilutedContainer.appendChild(litecoinFullyDilutedPrice);
 
     const litecoinTotalVolumeContainer = document.createElement('div');
@@ -1440,7 +1521,7 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinTotalVolumePrice = document.createElement('span');
     litecoinTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    litecoinTotalVolumePrice.textContent = '$' + Number(cryptoData[22].total_volume).toLocaleString('en-US');
+    litecoinTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     litecoinTotalVolumeContainer.appendChild(litecoinTotalVolumePrice);
 
     const litecoinCirculatingSupplyContainer = document.createElement('div');
@@ -1454,7 +1535,7 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinCirculatingSupplyPrice = document.createElement('span');
     litecoinCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    litecoinCirculatingSupplyPrice.textContent = Number(cryptoData[22].circulating_supply).toLocaleString('en-US');
+    litecoinCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     litecoinCirculatingSupplyContainer.appendChild(litecoinCirculatingSupplyPrice);
 
     const litecoinTotalSupplyContainer = document.createElement('div');
@@ -1468,7 +1549,7 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinTotalSupplyPrice = document.createElement('span');
     litecoinTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    litecoinTotalSupplyPrice.textContent = Number(cryptoData[22].total_supply).toLocaleString('en-US');
+    litecoinTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     litecoinTotalSupplyContainer.appendChild(litecoinTotalSupplyPrice);
 
     const litecoinMaxSupplyContainer = document.createElement('div');
@@ -1482,7 +1563,7 @@ function litecoinPopUp(cryptoData) {
 
     const litecoinMaxSupplyPrice = document.createElement('span');
     litecoinMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    litecoinMaxSupplyPrice.textContent = Number(cryptoData[22].max_supply).toLocaleString('en-US');
+    litecoinMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     litecoinMaxSupplyContainer.appendChild(litecoinMaxSupplyPrice);
 }
 
@@ -1498,6 +1579,14 @@ document.getElementById('litecoin').addEventListener('click', () => {
 
 
 function stellarPopUp(cryptoData) {
+    const coinName = "Stellar"; 
+    const coin = cryptoData.find(item => item.name.toLowerCase() === coinName.toLowerCase());
+
+    if (!coin) {
+        console.error("Coin not found in API response.");
+    } 
+
+
     const stellarContainer = document.createElement('div');
     stellarContainer.classList.add('fixed', 'top-1/2', 'left-1/2', '-translate-x-1/2', '-translate-y-1/2', 'bg-white', 'p-4', 'border', 'border-gray-400', 'w-1/3', 'flex', 'flex-col', 'gap-3', 'rounded', 'xl:w-1/2', 'md:w-3/4', 'sm:w-full');
     popupContainer.innerHTML = ''; 
@@ -1509,18 +1598,18 @@ function stellarPopUp(cryptoData) {
 
     const stellarLogo = document.createElement('img');
     stellarLogo.classList.add('w-9');
-    stellarLogo.src = cryptoData[34].image;
+    stellarLogo.src = coin.image;
     stellarLogo.alt = 'Stellar';
     stellarPriceAndLogo.appendChild(stellarLogo);
 
     const stellarName = document.createElement('span');
     stellarName.classList.add('text-slate-900', 'font-bold', 'text-2xl');
-    stellarName.textContent = cryptoData[34].name;
+    stellarName.textContent = coin.name;
     stellarPriceAndLogo.appendChild(stellarName);
 
     const stellarSymbol = document.createElement('span');
     stellarSymbol.classList.add('text-slate-400', 'uppercase', 'text-xl');
-    stellarSymbol.textContent = cryptoData[34].symbol;
+    stellarSymbol.textContent = coin.symbol;
     stellarPriceAndLogo.appendChild(stellarSymbol);
 
     const closeBtn = document.createElement('span');
@@ -1533,7 +1622,7 @@ function stellarPopUp(cryptoData) {
 
     const stellarPrice = document.createElement('div');
     stellarPrice.classList.add('text-slate-950', 'text-6xl', 'font-bold', 'mb-3');
-    stellarPrice.textContent = '$' + Number(cryptoData[34].current_price).toFixed(5).toLocaleString('en-US');
+    stellarPrice.textContent = '$' + Number(coin.current_price).toFixed(5).toLocaleString('en-US');
     stellarContainer.appendChild(stellarPrice);
 
     const stellarMarketCapContainer = document.createElement('div');
@@ -1547,7 +1636,7 @@ function stellarPopUp(cryptoData) {
 
     const stellarMarketCapPrice = document.createElement('span');
     stellarMarketCapPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    stellarMarketCapPrice.textContent = '$' + Number(cryptoData[34].market_cap).toLocaleString('en-US');
+    stellarMarketCapPrice.textContent = '$' + Number(coin.market_cap).toLocaleString('en-US');
     stellarMarketCapContainer.appendChild(stellarMarketCapPrice);
 
     const stellarFullyDilutedContainer = document.createElement('div');
@@ -1561,7 +1650,7 @@ function stellarPopUp(cryptoData) {
 
     const stellarFullyDilutedPrice = document.createElement('span');
     stellarFullyDilutedPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    stellarFullyDilutedPrice.textContent = '$' + Number(cryptoData[34].fully_diluted_valuation).toLocaleString('en-US');
+    stellarFullyDilutedPrice.textContent = '$' + Number(coin.fully_diluted_valuation).toLocaleString('en-US');
     stellarFullyDilutedContainer.appendChild(stellarFullyDilutedPrice);
 
     const stellarTotalVolumeContainer = document.createElement('div');
@@ -1575,7 +1664,7 @@ function stellarPopUp(cryptoData) {
 
     const stellarTotalVolumePrice = document.createElement('span');
     stellarTotalVolumePrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    stellarTotalVolumePrice.textContent = '$' + Number(cryptoData[34].total_volume).toLocaleString('en-US');
+    stellarTotalVolumePrice.textContent = '$' + Number(coin.total_volume).toLocaleString('en-US');
     stellarTotalVolumeContainer.appendChild(stellarTotalVolumePrice);
 
     const stellarCirculatingSupplyContainer = document.createElement('div');
@@ -1589,7 +1678,7 @@ function stellarPopUp(cryptoData) {
 
     const stellarCirculatingSupplyPrice = document.createElement('span');
     stellarCirculatingSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    stellarCirculatingSupplyPrice.textContent = Number(cryptoData[34].circulating_supply).toLocaleString('en-US');
+    stellarCirculatingSupplyPrice.textContent = Number(coin.circulating_supply).toLocaleString('en-US');
     stellarCirculatingSupplyContainer.appendChild(stellarCirculatingSupplyPrice);
 
     const stellarTotalSupplyContainer = document.createElement('div');
@@ -1603,7 +1692,7 @@ function stellarPopUp(cryptoData) {
 
     const stellarTotalSupplyPrice = document.createElement('span');
     stellarTotalSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    stellarTotalSupplyPrice.textContent = Number(cryptoData[34].total_supply).toLocaleString('en-US');
+    stellarTotalSupplyPrice.textContent = Number(coin.total_supply).toLocaleString('en-US');
     stellarTotalSupplyContainer.appendChild(stellarTotalSupplyPrice);
 
     const stellarMaxSupplyContainer = document.createElement('div');
@@ -1617,7 +1706,7 @@ function stellarPopUp(cryptoData) {
 
     const stellarMaxSupplyPrice = document.createElement('span');
     stellarMaxSupplyPrice.classList.add('text-slate-900', 'text-lg', 'font-semibold');
-    stellarMaxSupplyPrice.textContent = Number(cryptoData[34].max_supply).toLocaleString('en-US');
+    stellarMaxSupplyPrice.textContent = Number(coin.max_supply).toLocaleString('en-US');
     stellarMaxSupplyContainer.appendChild(stellarMaxSupplyPrice);
 }
 
